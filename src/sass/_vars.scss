@@ -1,0 +1,17 @@
+// ==================================================
+// ===========>FONT<=================================
+@mixin font-face($font-family, $url) {
+    @font-face {
+        font-family: '#{$font-family}';
+        src: url('../fonts/#{$url}.woff') format('woff'),
+            url('../fonts/#{$url}.woff2') format('woff2');
+    }
+}
+@include font-face(TTCommons, TTCommons-Regular);
+@include font-face(PTSans-Regular, PTN57F0);
+@include font-face(TTCommons-DemiBold, TTCommons-DemiBold);
+
+// ==================================================
+// ===========>COLORS<===============================
+$color-white: #ffffff;
+$black-link: #33383c;
