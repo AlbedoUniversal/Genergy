@@ -2,23 +2,48 @@
 @import '_bootstrap';
 @import 'vars';
 @import 'fonts';
+@import 'about';
+@import 'advantages';
 
+
+.section-heading {
+    font-size: 2.625rem;
+    color: $help-heading;
+    font-family: TTCommons-DemiBold;
+        .bold-orange {
+            font-weight: bold;
+            color: $bold-orange;
+        }
+}
 
 body {
     background-color: $color-white;
 
     .header {
-        background-color: rgb(161, 165, 103);
+        background-color: rgb(255, 255, 255);
         margin: 0 auto;
         padding: 1.25rem 0 0;
-
+        position: relative;
+        margin-bottom: 20rem;
+        &-orange {
+            position: absolute;
+            z-index: 0;
+            width: 50%;
+            min-height: 55rem;
+            top: 0;
+            right: -11.625rem;
+            background-color: $bg-orange;
+        }
         &-content {
             max-width: 100rem;
             margin: 0 auto;
+            z-index: 1;
+            position: relative;
         }
-
+        &-nav {
+            padding-bottom: 4.25rem;
+        }
         &-menu {
-
             &__item {
                 list-style-type: none;
 
@@ -40,16 +65,13 @@ body {
                 font-size: 0.875rem;
                 user-select: none;
                 line-height: 14px;
-
             }
-
             &__time {
                 user-select: none;
                 font-family: TTCommons;
                 font-size: 1.0625rem;
                 color: $color-white;
             }
-
             &__ordercall {
                 min-width: 10.5625rem;
                 min-height: 2.8125rem;
@@ -67,40 +89,193 @@ body {
             }
         }
         &-tagline {
-            display: flex;
-
             &__text {
-
+                flex-basis: 40%;
             }
             &__headings {
-
+                padding-bottom: 2.4375rem;
             }
             &__heading {
                 font-family: TTCommons-DemiBold;
                 font-size: 3.5rem;
                 line-height: 3.5rem;
+                color: $heading-black;
+                line-height: normal;
+                padding-left: 5.75rem;
             }
             &__subheading {
+                font-size: 1.625rem;
+                color: $subheading-grey;
                 font-family: TTCommons;
+                padding-left: 5.75rem;
             }
+            &__promo {
+               
+                &-text {
+                    width: 36.5rem;
+                    min-height: 14.125rem;
+                    border: solid 9px $border-grey;
+                    position: relative;
+                    padding: 50px;
+                    z-index: 3;
+                    left: 1.25rem;
+                }
+                &-heading {
+                    font-size: 1.625rem;
+                    color: $heading-black;
+                    .bold-orange {
+                        font-weight: bold;
+                        color: $bold-orange;
+                    }
+                }
+                &-subheading {
+                    font-family: PTSans-Regular;
+                    color: $subheading-grey;
+                    letter-spacing: 0.09px;
+                    font-size: 1.2rem;  
+                }
+                &-button {
+                    width: 19.4375rem;
+                    min-height:5.5rem;
+                    background-color: $color-white;
+                    position: absolute;
+                    z-index: 1;
+                }
+                &-sign {                 
+                    min-width: 16.5625rem;
+                    border: 8px solid rgb(248, 221, 199);
+                    background-image: linear-gradient(to top, #e66700, #f6af19);
+                    color: $color-white;
+                    border-radius: 3.125rem;
+                    cursor: pointer;
+                    font-family: TTCommons;
+                    font-size: 1.375rem;
+                    outline: none;
 
 
-
-
-
-
+                }
+            }
             &__picture {
+                flex-basis: 60%;
                 position: relative;
                 &-man {
+                    width: 24%;
                     position: absolute;
-                    left: 496px;
-                    top: 152px;
+                    z-index: 2;
+                    right: -1.5rem;
+                    bottom: -10.5rem;
                 }
                 &-car {
+                    width: 100%;
                     position: absolute;
-                    
-                    
+                    z-index: 1;
+                    left: 6.25rem;
                 }
+            }
+        }
+    }
+    .help {
+        margin-top: 5rem;
+        &-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 21.25rem);
+            grid-template-rows: repeat(2, 1fr);
+            column-gap: 2rem;
+            row-gap: 2rem;
+            justify-content: center;
+            margin-top: 2.4rem;
+            &__item {
+                position: relative;
+                min-height: 16.875rem;
+                &:nth-child(1) {
+                    background-image: url('../images/s4/1.png');
+                } 
+                &:nth-child(2) {
+                    background-image: url('../images/s4/5.png');
+                } 
+                &:nth-child(3) {
+                    background-image: url('../images/s4/3.png');
+                } 
+                &:nth-child(4) {
+                    background-image: url('../images/s4/4.png');
+                } 
+                &:nth-child(5) {
+                    background-image: url('../images/s4/5.png');
+                } 
+                &:nth-child(6) {
+                    background-image: url('../images/s4/6.png');
+                } 
+            }
+            &__heading {
+                font-family: TTCommons-DemiBold;
+                font-size: 2.25rem;
+                line-height: 0.97;
+                letter-spacing: 0.18px;
+                font-weight: 600;
+                color: $color-white;
+                position: absolute;
+                z-index: 2;
+                bottom: 0;
+                padding: 60px 27px;
+            }
+
+            &__description {
+                // display: none;
+                color: $heading-black;
+                line-height: 1.13;
+                letter-spacing: 0.08px;
+                font-size: 1rem;
+                font-family: PTSans-Regular;
+                // position: absolute;
+                // top: 70px;
+                transition-duration: 0.5s;
+                opacity: 0;
+                height: 0;
+                visibility: hidden;
+            }
+
+            &__overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url('../images/s4/overlay.png');
+                z-index: 1;
+                transition-duration: 0.5s;
+            }
+
+            &__arrow {
+                position: absolute;
+                bottom: 0;
+                z-index: 3;
+                padding: 40px 27px;
+                transition-duration: 0.5s;
+            }
+
+            &__item:hover {
+                background-image: none;
+                border:  solid 9px $border-grey;
+                padding: 20px;
+            }
+            &__item:hover .help-list__heading {
+                color: $heading-black;
+                top: 20px;
+                padding: 0;
+                font-size: 1.875rem;
+            }
+            &__item:hover .help-list__description {
+                // display: block;
+                height: auto;
+                opacity: 1;
+                visibility: visible;
+                margin-top: 3.5rem;
+            }
+            &__item:hover .help-list__overlay {
+                display: none;
+            }
+            &__item:hover .help-list__arrow {
+                display: none;
             }
         }
     }

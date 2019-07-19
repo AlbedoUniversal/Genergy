@@ -10,8 +10,24 @@
 @include font-face(TTCommons, TTCommons-Regular);
 @include font-face(PTSans-Regular, PTN57F0);
 @include font-face(TTCommons-DemiBold, TTCommons-DemiBold);
+@include font-face(TTCommons-Medium, TTCommons-Medium);
 
 // ==================================================
 // ===========>COLORS<===============================
+
+
 $color-white: #ffffff;
 $black-link: #33383c;
+$heading-black: #1a1717;
+$subheading-grey:#696969;
+$bold-orange: #e66700;
+$border-grey: #e2e2e2;
+$bg-orange: #f3993d;
+$help-heading: #3f3f3f;
+
+// ==================================================
+// ===========>MIXINS<===============================
+
+@mixin border-styles {
+
+}
