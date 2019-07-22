@@ -1,0 +1,44 @@
+@import '../css/libs/slick.css';
+
+.stocks {
+
+  &__content {
+    max-width: 100rem;
+    margin: 0 auto;
+  }
+
+  &__slider {
+    position: relative;
+
+    &-item {
+      border: 9px solid $border-grey;
+      padding-top: 2.167em;
+      padding-left: 2em;
+      padding-right: 3.56em;
+      padding-bottom: 2.167em;
+    }
+    
+    &-inner {
+      font-size: 18px;
+      color: $subheading-grey;
+      
+      &-heading {
+        font-size: 1.33em;
+        color: $heading-black;
+      }
+    }
+    
+    &-prev {
+      position: absolute;
+      left: 0;
+      top: 45%;
+    }
+    
+    &-next {
+      position: absolute;
+      right: 0;
+      top: 45%;
+      transform: rotateY(180deg);
+    }
+  }
+}

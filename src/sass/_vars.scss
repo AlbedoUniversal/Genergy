@@ -51,6 +51,11 @@ $help-heading: #3f3f3f;
 }
 
 @keyframes textUP {
-    
+    0% {
+        bottom: 0;
+    }
+    70% {
+        bottom: 200px;
+    }
 }
 

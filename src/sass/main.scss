@@ -4,16 +4,17 @@
 @import 'fonts';
 @import 'about';
 @import 'advantages';
+@import 'stocks';
 
 
 .section-heading {
     font-size: 2.625rem;
     color: $help-heading;
     font-family: TTCommons-DemiBold;
-        .bold-orange {
-            font-weight: bold;
-            color: $bold-orange;
-        }
+    .bold-orange {
+        font-weight: bold;
+        color: $bold-orange;
+    }
 }
 
 body {
@@ -285,10 +286,132 @@ body {
                 display: none;
             }
             &__item:hover .help-list__arrow {
-                // display: none;
                 right: 30px;
                 animation: arrow 10s infinite;
             }
+        }
+        &-more {
+            margin-top: 3.3em;
+            margin-bottom: 4em;
+        }
+    }
+
+    .stocks {
+        margin-bottom: 5em;
+    } 
+
+    .details {
+        position: relative;
+        margin-bottom: 7em;
+        &:before {
+            content: "";
+            position: absolute;
+            width: 1011px;
+            height: 484px;
+            background-image: url(../images/s7/dots.png);
+        }
+        
+        &-item {
+            max-width: 100rem;
+            margin: 0 auto;
+            background-image: url(../images/s7/fly-gears.png);
+            background-size: contain;
+
+            &__text {
+                flex-basis: 45%;
+                position: relative;
+                right: -5%;
+        
+
+                .section-heading {
+                    text-align: left;
+                    line-height: 1.4;
+                    margin-bottom: 1em;
+                }
+            }
+            &__list {
+                list-style-image: url(../images/s7/check.png);
+            }
+            &__link {
+                font-size: 18px;
+                line-height: 1.11;
+                letter-spacing: 0.09px;
+                text-align: left;
+                color: $heading-black;
+                font-family: PTSans-Regular;
+                margin-bottom: 1.5em;
+                padding-left: .4em;
+            }
+
+            &__picture {
+                flex-basis: 55%;
+                position: relative;
+
+            }
+
+            &__spare {
+                position: absolute;
+                 bottom: 194px;
+            }
+            &__oil {
+                position: absolute;
+                left: -59px;
+                bottom: 153px;
+            }
+
+            &__small {
+                position: absolute;
+                right: 360px;
+            }
+            &__little {
+                position: absolute;
+                bottom: 94px;
+                left: -26%;
+            }
+            &__big {
+                position: absolute;
+                bottom: 86px;
+                left: 73%;
+            }
+        }
+    }
+    .recomendations {
+        &-content {
+            max-width: 100rem;
+            margin: 0 auto;
+            
+        }
+        &-text {
+            max-width: 886px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 844px;
+                height: 184px;
+                background-image: url(../images/s8/dotstop.png);
+                z-index: -1;
+            }
+            &__description {
+                text-align: center;
+                max-width: 718px;
+                font-size: 18px;
+                line-height: 1.11;
+                letter-spacing: 0.09px;
+                color: $subheading-grey;
+                font-family: PTSans-Regular;
+            }
+  
+        }
+
+        &-road {
+            text-align: center;
         }
     }
 }
