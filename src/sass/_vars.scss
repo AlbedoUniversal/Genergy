@@ -31,3 +31,26 @@ $help-heading: #3f3f3f;
 @mixin border-styles {
 
 }
+
+
+// ==================================================
+// ===========>ANIMATIONS<===============================
+
+
+@keyframes arrow {
+    20%, 100% {
+        opacity: 0;
+        transform: translate(200px, 0);
+    }
+    0% {
+        opacity: 1;
+    }
+    10% {
+        opacity: 0;
+    }
+}
+
+@keyframes textUP {
+    
+}
+

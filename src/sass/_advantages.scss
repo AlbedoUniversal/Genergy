@@ -2,25 +2,23 @@
   position: relative;
   padding-top: 3.5625rem;
   overflow: hidden;
-  margin-top: 3rem;
+  margin-top: 2rem;
   
   .section-heading {
-    padding-bottom: 3.5625rem;
+    padding-bottom: 0.2rem;
   }
   
   &__list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 11rem);
-    grid-template-rows: repeat(2, 1fr);
-    column-gap: 10vw;
-    row-gap: 5vw;
   }
-
+  
   &__item {
+    flex-basis: 300px;
     
     &-thumb {
+      display: flex;
+      min-height: 130px;
+      align-items: flex-end;
       margin-bottom: 1.25rem;
-      max-height: 7.5rem;
     }
 
     &-description {
@@ -36,7 +34,7 @@
   &__dots {
     position: absolute;
     left: 50%;
-    top: 0;
+    top: 12px;
     width: 100%;
     min-height: 11.5rem;
     background-image: url(../images/s3/dots.png);

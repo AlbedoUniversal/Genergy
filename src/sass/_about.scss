@@ -1,15 +1,28 @@
 
 .about {
   position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -205px;
+    width: 790px;
+    height: 364px;
+    background-image: url(../images/s3/dots.png);
+    background-size: contain;
+}
 
   &__content {
     max-width: 100rem;
     margin: 0 auto;
+    position: relative;
+
+
   }
 
   &__text {
     position: relative;
-    left: 40%;
+    left: 36%;
     max-width: 44.25rem;
     border: solid 9px $border-grey;
     padding: 4.375rem 7rem;
@@ -40,14 +53,14 @@
       .gear {
         position: absolute;
         max-width: 39.3125rem;
-        left: 7rem;
+        left: 14rem;
         top: -2rem;
       }
 
       .oil {
         position: absolute;
         max-width: 19.5rem;
-        left: 25.375rem;
+        left: 32.375rem;
         top: 11rem;
       }
 
@@ -73,9 +86,8 @@
       .right-oil {
         position: relative;
       }
-
     }
-
   }
+
 
 }
