@@ -7,6 +7,10 @@
 @import 'stocks';
 
 
+html {
+    font-size: 16px;
+}
+
 .section-heading {
     font-size: 2.625rem;
     color: $help-heading;
@@ -77,9 +81,9 @@ body {
                 letter-spacing: 0.18px;
                 color: $color-white;
                 font-family: TTCommons;
-                cursor: pointer;
+                cursor: pointer;  
                 outline: none;
-                padding: 0.833em 1.389em 1.056em;
+                padding: 0.833em 1.389em;
 
 
                 &:hover {
@@ -159,10 +163,6 @@ body {
                     outline: none;
                     padding: 1.2em 2em;
                     line-height: 1;
-
-
-
-
                 }
             }
             &__picture {
@@ -316,6 +316,8 @@ body {
             margin: 0 auto;
             background-image: url(../images/s7/fly-gears.png);
             background-size: contain;
+            background-position: 10% 37%;
+            background-repeat: no-repeat;
 
             &__text {
                 flex-basis: 45%;
@@ -346,17 +348,19 @@ body {
             &__picture {
                 flex-basis: 55%;
                 position: relative;
-
+ 
             }
 
             &__spare {
                 position: absolute;
-                 bottom: 194px;
+                 bottom: 18%;
+                 left: 10%;
+                 width: 90%;
             }
             &__oil {
                 position: absolute;
-                left: -59px;
-                bottom: 153px;
+                left: 1%;
+                bottom: 15%;
             }
 
             &__small {
@@ -370,8 +374,13 @@ body {
             }
             &__big {
                 position: absolute;
-                bottom: 86px;
-                left: 73%;
+                bottom: 0;
+                left: 100%;
+            }
+            &__big2 {
+                position: absolute;
+                right: 178%;
+                top: 10%;
             }
         }
     }
@@ -401,17 +410,132 @@ body {
             &__description {
                 text-align: center;
                 max-width: 718px;
-                font-size: 18px;
+                font-size: 1.125em;
                 line-height: 1.11;
                 letter-spacing: 0.09px;
                 color: $subheading-grey;
                 font-family: PTSans-Regular;
             }
-  
         }
 
         &-road {
             text-align: center;
+        }
+    }
+
+    .map {
+        &-content {
+            max-width: 100rem;
+            margin: 0 auto;
+        }
+    }
+
+    .questions {
+        .questions-content {
+            max-width: 100rem;
+            margin: 0 auto;
+            background-color: #494542;
+            justify-content: space-evenly;
+
+            &__picture {
+                position: relative;
+                min-height: 19.188em;
+                width: 17.750em;
+                &-worker {
+                    position: absolute;
+                    right: -30%;
+                    bottom: 0;
+                }
+                &-leftgears {
+                    position: absolute;
+                    left: -30%;
+                    top: -7%;
+                }
+                &-leftsmallgears {
+                    position: absolute;
+                    left: 13%;
+                    bottom: 0;
+                }
+                &-rightgears {
+                    position: absolute;
+                    left: 13%;
+                    bottom: 0;
+                }
+            }
+            &__text {
+                position: relative;
+                &::before {
+                    content: "";
+                    width: 4.063em;
+                    height: 6.313em;
+                    position: absolute;
+                    background-image: url('../images/s12/rightgears.png');
+                    right: -20.8%;
+                }
+                &::after {
+                    content: "";
+                    width: 4.750em;
+                    height: 4.500em;
+                    position: absolute;
+                    background-image: url('../images/s12/smallgears-right.png');
+                    right: 21%;
+                    bottom: -40%;
+                }
+            }
+            &__heading {
+                font-family: TTCommons-Medium;
+                font-size: 2.625em;
+                font-weight: 500;
+                text-align: left;
+                color: $color-white;
+                letter-spacing: 0.42px;
+            }
+            &__inputs {
+                flex-direction: column;
+                .name {
+                    @include questions-input;
+                }
+                .telephone {
+                    @include questions-input;
+                    margin-left: 1.563em;
+                }
+                .call {
+                    padding: 0.6em 2em;
+                    border: solid 6px rgb(148, 124, 105);
+                    margin-left: 1.563em;
+                }
+            }
+            &__personality {
+                font-size: 0.938em;
+                font-family: PTSans-Regular;
+                font-style: italic;
+                color: $input-link-grey;
+                letter-spacing: 0.08px;
+                margin-top: 1.438em;
+                position: relative;
+                padding-left: 3em;
+
+                &-link {
+                    color: $color-white;
+                    text-decoration: none;
+
+                    &:hover {
+                        border-bottom: 1px solid #ffffff54;
+                    }
+                }
+
+                &:before {
+                    content: "";
+                    width: 1.563em;
+                    height: 1.563em;
+                    border-radius: 50%;
+                    background: #7f7f7f url(../images/s12/checked.png) no-repeat;
+                    position: absolute;
+                    background-position-x: center;
+                    background-position-y: center;
+                    left: 0;
+                }
+            }
         }
     }
 }

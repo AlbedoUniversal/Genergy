@@ -9,6 +9,7 @@
 
   &__slider {
     position: relative;
+    margin-top: 50px;
 
     &-item {
       border: 9px solid $border-grey;
@@ -16,29 +17,116 @@
       padding-left: 2em;
       padding-right: 3.56em;
       padding-bottom: 2.167em;
+      transition-duration: 0.5s;
+      
+      &:focus {
+        outline: none;
+      }
+      
+      &:hover {
+        border: 9px solid $bold-orange;
+        
+        .stocks__slider-inner-duration {
+          background-color: $bold-orange;
+        }
+      }
     }
     
     &-inner {
-      font-size: 18px;
+      font-size: 1.125em;
       color: $subheading-grey;
       
       &-heading {
         font-size: 1.33em;
         color: $heading-black;
+        font-family: PTSans-Regular;
+        letter-spacing: 0.12px;
+        line-height: 0.83;
+        font-weight: normal;
+      }
+      
+      &-img {
+        width: 128%;
+        border-top: 0.938em solid white;
+        border-bottom: 0.938em solid white;
+      }
+
+      &-duration {
+        font-family: PTSans-Regular;
+        font-size: 1.125em;
+        line-height: 1.11;
+        letter-spacing: 0.09px;
+        color: $color-white;
+        background-color: $slider-grey;
+        padding: 0.750em 0.938em;
+        text-align: center;
+        transform: translate3d(0, 65px, 0) skewX(-15deg);
+        transition-duration: 0.5s;
+
+        span {
+          display: block;
+          transform: translate3d(0, 0, 0) skewX(15deg);
+        }
       }
     }
-    
-    &-prev {
-      position: absolute;
-      left: 0;
-      top: 45%;
-    }
-    
-    &-next {
-      position: absolute;
-      right: 0;
-      top: 45%;
-      transform: rotateY(180deg);
+  }
+}
+
+.slick-track {
+  display: flex;
+  justify-content: center;
+}
+
+.slick-list {
+  max-width: 1171px;
+  margin: 0 auto;
+  padding-bottom: 26px;
+}
+
+.slick-slide {
+  width: 473px !important;
+  margin-right: 114px;
+  margin: auto;
+}
+
+.slick-next {
+  position: absolute;  
+  top: 45%;
+  right: 0;
+  transform: rotateY(180deg);
+}
+
+.slick-prev {
+  position: absolute;
+  top: 45%;
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+
+  li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    opacity: 0.11;
+    background-color: #000000;
+    border-radius: 50%;
+    margin: 0 5px;
+
+    button {
+      display: none;
     }
   }
+
+  .slick-active {
+    width: 6px;
+    height: 6px;
+    padding: 2px;
+    opacity: .5;
+    background-color: rgb(0, 0, 0);
+  }
+
 }
