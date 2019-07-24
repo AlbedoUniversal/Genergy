@@ -28,6 +28,14 @@ $help-heading: #3f3f3f;
 $input-grey: #787878;
 $input-link-grey: #929292;
 $slider-grey: #868686;
+$copyright-grey: #727272;
+$social-grey: #bebebe;
+$footer-address: #aeaeae;
+$footer-bg: #252525;
+$slider-grey: #868686;
+$reviews-grey: #565656;
+$reviews-bg: #db6f00;
+$reviews-orange: #ffba8f;
 
 // ==================================================
 // ===========>MIXINS<===============================
@@ -40,36 +48,29 @@ $slider-grey: #868686;
     background-color: $color-white;
     outline: none;
     border: none;
-    padding-left: 1.000em;
+    padding-left: 2.000em;
     font-size: 1.000em;
     font-family: PTSans-Regular;
     color: $input-grey;
+}
+
+@mixin footer-item {
+    min-height: 4.375em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 
 // ==================================================
 // ===========>ANIMATIONS<===============================
 
-
-@keyframes arrow {
-    20%, 100% {
-        opacity: 0;
-        transform: translate(200px, 0);
-    }
-    0% {
-        opacity: 1;
-    }
-    10% {
-        opacity: 0;
-    }
-}
-
-@keyframes textUP {
-    0% {
-        bottom: 0;
-    }
-    70% {
-        bottom: 200px;
-    }
-}
+// @keyframes button {
+//     0% {
+//         background-image: linear-gradient(to top, #e66700, #f6af19);
+//     }
+//     100% {
+//         background-image: linear-gradient(to top, #f6af19, #e66700);
+//     }
+// }
 

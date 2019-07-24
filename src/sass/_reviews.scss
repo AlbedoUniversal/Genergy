@@ -1,0 +1,157 @@
+.reviews {
+  background: $reviews-bg;
+  opacity: 0.95;
+  padding-top: 104px;
+  padding-bottom: 92px;
+
+  &-content {
+    max-width: 100rem;
+    margin: 0 auto;
+  }
+
+  .section-heading {
+    margin-bottom: 60px;
+    font-family: TTCommons-DemiBold;
+    font-size: 42px;
+    color: $white;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+
+  &-slider {
+    &__item {
+      max-width: 360px !important;
+      margin-right: 90px;
+      
+      &:focus {
+        outline: none;
+      }
+    }
+    
+    &__content {
+      position: relative;
+      height: 340px;
+      padding: 1em 1.75em;
+      font-size: 16px;
+      line-height: 1.25;
+      letter-spacing: 0.08px;
+      text-align: left;
+      color: $reviews-grey;
+      background-color: $white;
+      border: 9px solid transparent;
+
+      &::after {
+        position: absolute;
+        content: "";
+        border: 14px solid $white;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        bottom: -28px;
+        left: 6%;
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 30px;
+        height: 30px;
+        background-size: contain;
+        background-image: url(../images/s9/Vector.svg);
+        background-repeat: no-repeat;
+        bottom: -24px;
+        left: 15px;
+        transform: skewX(-15deg);
+        z-index: 2;
+      }
+
+      &:hover {
+        border: 9px solid $border-grey;
+
+        &::after {
+          border-left-color: $border-grey;
+          border-top-color: $border-grey;
+        }
+      }
+
+      &-quotes {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__author {
+      margin-top: 26px;
+
+      &-thumb {
+        margin-right: 14px;
+      }
+      
+      &-name {
+        font-family: TTCommons-DemiBold;
+        font-size: 1em;
+        line-height: 1.25;
+        letter-spacing: 0.08px;
+        font-weight: 500;
+        color: $white;
+        margin-bottom: 0;
+      }
+
+      &-car {
+        font-size: 13px;
+        line-height: 1.38;
+        color: $reviews-orange;
+      }
+    }
+  }
+
+  .slick-track {
+    display: flex;
+    justify-content: center;
+  }
+
+  .slick-slide {
+    margin: 0 auto;
+  }
+
+  .slick-next {
+    position: absolute;  
+    top: 32%;
+    right: 0;
+  }
+  
+  .slick-prev {
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 32%;
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  
+    li {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      opacity: 0.32;
+      background-color: $white;
+      border-radius: 50%;
+      margin: 0 5px;
+  
+      button {
+        display: none;
+      }
+    }
+  
+    .slick-active {
+      width: 6px;
+      height: 6px;
+      padding: 2px;
+      opacity: 0.98;
+      background-color: $white;
+    }
+  }
+
+}

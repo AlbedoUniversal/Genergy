@@ -4,11 +4,17 @@
 @import 'fonts';
 @import 'about';
 @import 'advantages';
+@import '../css/libs/slick.css';
 @import 'stocks';
+@import 'reviews';
 
 
 html {
     font-size: 16px;
+}
+
+p {
+    margin-bottom: 0;
 }
 
 .section-heading {
@@ -144,7 +150,6 @@ body {
                 }
                 &-button {
                     width: 19.4375rem;
-                    // min-height: 5.5rem;
                     background-color: $color-white;
                     position: absolute;
                     z-index: 1;
@@ -152,9 +157,8 @@ body {
 
                 }
                 &-sign {                 
-                    // min-width: 16.5625rem;
                     border: 8px solid rgb(248, 221, 199);
-                    background-image: linear-gradient(to top, #e66700, #f6af19);
+                    background-image: linear-gradient(to top, #e66700 0%, #f6af19 100%);
                     color: $color-white;
                     border-radius: 2.591em;
                     cursor: pointer;
@@ -163,27 +167,33 @@ body {
                     outline: none;
                     padding: 1.2em 2em;
                     line-height: 1;
+                     
+                    &:hover {
+                    }
                 }
             }
             &__picture {
                 flex-basis: 60%;
                 position: relative;
                 &-man {
-                    width: 24%;
                     position: absolute;
                     z-index: 2;
-                    right: -1.5rem;
-                    bottom: -7.5rem;
+                    right: 9.5rem;
+                    bottom: -1.5rem;
                 }
                 &-car {
-                    width: 100%;
                     position: absolute;
                     z-index: 1;
-                    left: 6.25rem;
+                    left: 7.25rem;
                 }
             }
         }
     }
+
+/////////////////////////////////////////////
+// <------------- HELP BLOCK 4 ------------->
+////////////////////////////////////////////
+
     .help {
         margin-top: 5rem;
         &-list {
@@ -197,7 +207,7 @@ body {
             &__item {
                 position: relative;
                 min-height: 16.875rem;
-                // transition-duration: 2s;
+                transition: 0.5s;
                 &:nth-child(1) {
                     background-image: url('../images/s4/1.png');
                 } 
@@ -228,21 +238,21 @@ body {
                 z-index: 2;
                 bottom: 0;
                 padding: 60px 27px;
+                transition: 0.3s;
             }
 
             &__description {
-                // display: none;
                 color: $heading-black;
                 line-height: 1.13;
                 letter-spacing: 0.08px;
                 font-size: 1rem;
                 font-family: PTSans-Regular;
-                // position: absolute;
-                // top: 70px;
-                transition-duration: 0.5s;
+                position: absolute;
+                top: 70px;
                 opacity: 0;
                 height: 0;
                 visibility: hidden;
+                transition: .7s;
             }
 
             &__overlay {
@@ -253,22 +263,23 @@ body {
                 height: 100%;
                 background-image: url('../images/s4/overlay.png');
                 z-index: 1;
-                transition-duration: 0.5s;
             }
 
             &__arrow {
                 position: absolute;
+                left: 0;
                 bottom: 0;
                 z-index: 3;
                 padding: 40px 27px;
-                transition-duration: 0.5s;
             }
 
             &__item:hover {
                 background-image: none;
                 border:  solid 9px $border-grey;
                 padding: 20px;
+                transition: 0.5s;
             }
+
             &__item:hover .help-list__heading {
                 color: $heading-black;
                 top: 20px;
@@ -276,18 +287,21 @@ body {
                 font-size: 1.875rem;
             }
             &__item:hover .help-list__description {
-                // display: block;
-                height: auto;
+                top: 30px;
+                left: 3%;
                 opacity: 1;
                 visibility: visible;
                 margin-top: 3.5rem;
             }
+
             &__item:hover .help-list__overlay {
                 display: none;
             }
+
             &__item:hover .help-list__arrow {
-                right: 30px;
-                animation: arrow 10s infinite;
+                left: 40%;
+                opacity: 0;
+                transition: 0.5s;
             }
         }
         &-more {
@@ -296,9 +310,20 @@ body {
         }
     }
 
+
+/////////////////////////////////////////////
+// <------------- SLIDER BLOCK 4 ------------->
+////////////////////////////////////////////
+
     .stocks {
         margin-bottom: 5em;
     } 
+
+
+/////////////////////////////////////////////
+// <------------- SLIDER BLOCK 5 ------------->
+////////////////////////////////////////////
+
 
     .details {
         position: relative;
@@ -384,6 +409,13 @@ body {
             }
         }
     }
+
+/////////////////////////////////////////////
+// <------------- RECOMENDATION BLOCK 6 ------------->
+////////////////////////////////////////////
+
+
+
     .recomendations {
         &-content {
             max-width: 100rem;
@@ -425,16 +457,14 @@ body {
 
     .map {
         &-content {
-            max-width: 100rem;
             margin: 0 auto;
         }
     }
 
     .questions {
         .questions-content {
-            max-width: 100rem;
             margin: 0 auto;
-            background-color: #494542;
+            background-image: url('../images/s12/footer.png');
             justify-content: space-evenly;
 
             &__picture {
@@ -470,7 +500,7 @@ body {
                     height: 6.313em;
                     position: absolute;
                     background-image: url('../images/s12/rightgears.png');
-                    right: -20.8%;
+                    right: -33.3%;
                 }
                 &::after {
                     content: "";
@@ -536,6 +566,104 @@ body {
                     left: 0;
                 }
             }
+        }
+    }
+    .footer {
+        background-color: $footer-bg;
+        position: relative;
+        z-index: 1;
+        &-content {
+            margin: 0 auto;
+            min-height: 12.000em;
+            max-width: 90rem;
+            &__logo {
+                @include footer-item; 
+                &-picture {
+
+                }
+                &-copyright {
+                    font-size: 0.975em;
+                    color: $copyright-grey;
+                    line-height: normal;
+                    font-family: PTSans-Regular;
+                }
+            }
+            &__social {
+                @include footer-item; 
+                &-heading {
+                    font-size: 1.100em;
+                    font-family: PTSans-Regular;
+                    line-height: normal;
+                    color: $social-grey;
+                }
+                &-item:hover {
+                    background-color: #e66700;
+                    border-radius: 50%;
+                    box-shadow:  0 0 15px rgba(233, 140, 53, 0.5);
+                    transition: 0.5s;
+                }
+            }
+            &__address {
+                @include footer-item;
+                flex-basis: 9%; 
+                &-heading {
+                    font-size: 1.100em;
+                    font-family: PTSans-Regular;
+                    line-height: normal;
+                    color: $social-grey;
+                }
+                &-description {
+                    font-family: PTSans-Regular;
+                    color: $footer-address;
+                    letter-spacing: 0.35px;
+                    font-size: 0.875em;
+
+                }
+            }
+
+            &__time {
+                @include footer-item; 
+                flex-basis: 9%;
+                &-clock {
+                    font-family: PTSans-Regular;
+                    font-size: 1.000em;
+                    line-height: 1.29;
+                    letter-spacing: 0.35px;
+                    color: $footer-address;
+                }
+                &-telephone {
+                    text-decoration: none;
+                    letter-spacing: 0.45px;
+                    color: $color-white;
+                    font-family: PTSans-Regular;
+                    font-weight: bold;
+                    font-size: 1.063em;
+
+                }
+            }
+            &__developers {
+                @include footer-item; 
+                flex-basis: 9%;
+                &-description {
+                    font-family: PTSans-Regular;
+                    color: rgba(255, 255, 255, 0.43);
+                    font-size: 0.875em;
+                    line-height: 1.2;
+                    letter-spacing: 0.14px;
+
+                }
+            }
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(../images/s4/overlay.png);
+            background-position-y: 191px;
+            z-index: -1;
+            opacity: 0.4;
         }
     }
 }

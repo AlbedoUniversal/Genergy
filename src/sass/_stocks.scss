@@ -1,15 +1,29 @@
-@import '../css/libs/slick.css';
+
 
 .stocks {
 
   &__content {
     max-width: 100rem;
     margin: 0 auto;
+      .section-heading {
+        position: relative;
+        &::before {
+          content: "";
+          width: 686px;
+          height: 184px;
+          position: absolute;
+          background-image: url('../images/s6/dots.png');
+          top: -70%;
+          right: 0%;
+          z-index: -1;
+        }
+      }
   }
 
   &__slider {
     position: relative;
     margin-top: 50px;
+    z-index: 2;
 
     &-item {
       border: 9px solid $border-grey;
@@ -43,6 +57,8 @@
         letter-spacing: 0.12px;
         line-height: 0.83;
         font-weight: normal;
+        position: relative;
+
       }
       
       &-img {
@@ -70,6 +86,21 @@
       }
     }
   }
+
+  .slick-next {
+    position: absolute;  
+    top: 45%;
+    right: 0;
+    transform: rotateY(180deg);
+    cursor: pointer;
+  }
+  
+  .slick-prev {
+    position: absolute;
+    top: 45%;
+    cursor: pointer;
+  }
+
 }
 
 .slick-track {
@@ -89,17 +120,7 @@
   margin: auto;
 }
 
-.slick-next {
-  position: absolute;  
-  top: 45%;
-  right: 0;
-  transform: rotateY(180deg);
-}
 
-.slick-prev {
-  position: absolute;
-  top: 45%;
-}
 
 .slick-dots {
   display: flex;
