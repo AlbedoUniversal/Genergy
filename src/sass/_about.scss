@@ -52,6 +52,11 @@
 
     &-coin {
       &:hover::before {
+        transition-duration: 0.7s;
+        visibility: visible;
+        opacity: 1;
+      }
+      &::before {
         position: absolute;
         content: "1-е место в ЮФО в категории мини-сервис";
         top: 90px;
@@ -61,6 +66,8 @@
         color: $subheading-grey;
         background-color: $white;
         box-shadow: 0 0 40px 0 rgba(172, 172, 172, 0.33);
+        opacity: 0;
+        visibility: hidden;
       }
 
       &::after {

@@ -4,6 +4,7 @@
 @import 'fonts';
 @import 'about';
 @import 'advantages';
+@import 'packs';
 @import '../css/libs/slick.css';
 @import 'stocks';
 @import 'reviews';
@@ -172,7 +173,7 @@ body {
                      
                     &:hover {
                         transform: scale(.9);
-                        
+
                     }
                 }
             }
@@ -343,10 +344,6 @@ body {
         &-item {
             max-width: 100rem;
             margin: 0 auto;
-            background-image: url(../images/s7/fly-gears.png);
-            background-size: contain;
-            background-position: 10% 37%;
-            background-repeat: no-repeat;
 
             &__text {
                 flex-basis: 45%;
@@ -380,6 +377,11 @@ body {
  
             }
 
+            &__gear {
+                position: absolute;
+                width: 100%;
+            }
+
             &__spare {
                 position: absolute;
                  bottom: 18%;
@@ -408,7 +410,7 @@ body {
             }
             &__big2 {
                 position: absolute;
-                right: 178%;
+                right: 182%;
                 top: 10%;
             }
         }
@@ -424,38 +426,38 @@ body {
         &-content {
             max-width: 100rem;
             margin: 0 auto;
-            
-        }
-        &-text {
-            max-width: 886px;
-            display: flex;
-            flex-wrap: wrap;
-            margin: 0 auto;
-            justify-content: center;
-            position: relative;
-            z-index: 1;
-
-            &::before {
-                content: "";
-                position: absolute;
-                width: 844px;
-                height: 184px;
-                background-image: url(../images/s8/dotstop.png);
-                z-index: -1;
-            }
-            &__description {
+            &__text {
+                max-width: 886px;
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 auto;
+                justify-content: center;
+                position: relative;
+                z-index: 1;
+    
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 844px;
+                    height: 184px;
+                    background-image: url(../images/s8/dotstop.png);
+                    z-index: -1;
+                }
+                &__description {
+                    text-align: center;
+                    max-width: 718px;
+                    font-size: 1.125em;
+                    line-height: 1.11;
+                    letter-spacing: 0.09px;
+                    color: $subheading-grey;
+                    font-family: PTSans-Regular;
+                }
+            }    
+       
+            &__road {
                 text-align: center;
-                max-width: 718px;
-                font-size: 1.125em;
-                line-height: 1.11;
-                letter-spacing: 0.09px;
-                color: $subheading-grey;
-                font-family: PTSans-Regular;
+                position: relative;
             }
-        }
-
-        &-road {
-            text-align: center;
         }
     }
 
@@ -495,31 +497,20 @@ body {
                         left: 13%;
                         bottom: 0;
                     }
-                    &-rightgears {
+                    &-rightgear {
                         position: absolute;
-                        left: 13%;
+                        right: -1390px;
+                        top: 40px;
+                    }
+                    &-rightsmallgear {
+                        position: absolute;
+                        right: -1100px;
                         bottom: 0;
                     }
                 }
                 &__text {
                     position: relative;
-                    &::before {
-                        content: "";
-                        width: 5.6rem;
-                        height: 6.313em;
-                        position: absolute;
-                        background-image: url(../images/s12/rightgears.png);
-                        right: -37.3%;
-                    }
-                    &::after {
-                        content: "";
-                        width: 4.750em;
-                        height: 4.500em;
-                        position: absolute;
-                        background-image: url('../images/s12/smallgears-right.png');
-                        right: 21%;
-                        bottom: -40%;
-                    }
+                    
                 }
                 &__heading {
                     font-family: TTCommons-Medium;
