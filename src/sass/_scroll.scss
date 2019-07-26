@@ -1,4 +1,23 @@
-.scroll {
-  
+@import '../css/libs/jquery.mCustomScrollbar.css';
 
+.scroll {
+  &-track {
+
+  }
+
+}
+
+.mcs-horizontal-example{
+  width: 100%;
+  overflow-x: auto;
+  display: -webkit-flex; display: flex;
+  -webkit-flex-direction: row; flex-direction: row;
+}
+
+.mcs-horizontal-example .mCSB_container{
+  display: -webkit-flex; display: flex;
+}
+
+.mcs-horizontal-example .item{
+  -webkit-flex-shrink: 0; flex-shrink: 0;
 }
