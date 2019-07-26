@@ -8,6 +8,7 @@
 @import '../css/libs/slick.css';
 @import 'stocks';
 @import 'reviews';
+@import 'scroll';
 
 
 html {
@@ -375,6 +376,9 @@ body {
                 flex-basis: 55%;
                 position: relative;
  
+                img {
+                    transition: transform 0.1s ease;
+                }
             }
 
             &__gear {
