@@ -7,6 +7,7 @@
             url('../fonts/#{$url}.woff2') format('woff2');
     }
 }
+
 @include font-face(TTCommons, TTCommons-Regular);
 @include font-face(PTSans-Regular, PTN57F0);
 @include font-face(TTCommons-DemiBold, TTCommons-DemiBold);
@@ -17,25 +18,33 @@
 
 $color-white: #ffffff;
 $black-link: #33383c;
+
 $heading-black: #1a1717;
+$help-heading: #3f3f3f;
 $subheading-grey:#696969;
+
 $bold-orange: #e66700;
 $border-grey: #e2e2e2;
+
 $bg-orange: #f3993d;
-$help-heading: #3f3f3f;
+
 $input-grey: #787878;
 $input-link-grey: #929292;
+
 $slider-grey: #868686;
 $copyright-grey: #727272;
 $social-grey: #bebebe;
+
 $footer-address: #aeaeae;
 $footer-bg: #252525;
-$slider-grey: #868686;
+
 $reviews-grey: #565656;
 $reviews-bg: #db6f00;
 $reviews-orange: #ffba8f;
+
 $tabs-nav-color: #292929;
 $tabs-money-color: #2c2c2c;
+
 $rails-color: #d3d3d3;
 $railbar-light: #8e8e8e;
 $railbar-dark: #383838;
@@ -65,13 +74,4 @@ $railbar-dark: #383838;
 }
 
 // ==================================================
-// ===========>ANIMATIONS<===============================
-
-// @keyframes button {
-//     0% {
-//         background-image: linear-gradient(to top, #e66700, #f6af19);
-//     }
-//     100% {
-//         background-image: linear-gradient(to top, #f6af19, #e66700);
-//     }
-// }
+// ===========>ANIMATIONS<===========================

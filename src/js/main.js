@@ -51,11 +51,11 @@ $(document).ready(function () {
       if (this.classList.contains('active')) {
         return;
       } else {
-        
+
         for (var j = 0; j < packs.length; j++) {
           packs[j].classList.remove('active', 'greyscale');
         }
-  
+
         this.classList.add('active', 'greyscale');
       }
     });
@@ -65,8 +65,7 @@ $(document).ready(function () {
   $(".mcs-horizontal-example").mCustomScrollbar({
     axis: "x",
     theme: "3d-dark",
-    advanced: { autoExpandHorizontalScroll: true },
-    scrollEasing: 'linear'
+    advanced: { autoExpandHorizontalScroll: true }
   });
 
 });

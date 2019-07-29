@@ -4,20 +4,39 @@
   margin: 15px 0;
 
   &-item {
-    width: 262px;
-    height: 245px;
+    min-width: 271px;
+    min-height: 253px;
     margin-right: 1px;
     @include set(262, 244);
     filter: grayscale(1);
-    border: 9px solid transparent;
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 
+    &:last-child {
+      margin-right: 0;
+    }
+
+    
     &:hover {
-      border-color: $bold-orange;
       filter: grayscale(0);
+      
+      .scroll-overlay {
+        border-color: $bold-orange;
+      }
     }
   }
   
+  &-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 9px solid transparent;
+  }
+
   &-img {
     width: 100%;
   }
@@ -47,14 +66,14 @@
 .mcs-horizontal-example{
   width: 100%;
   overflow-x: auto;
-  display: -webkit-flex; display: flex;
-  -webkit-flex-direction: row; flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .mcs-horizontal-example .mCSB_container{
-  display: -webkit-flex; display: flex;
+  display: flex;
 }
 
 .mcs-horizontal-example .item{
-  -webkit-flex-shrink: 0; flex-shrink: 0;
+  flex-shrink: 0;
 }
