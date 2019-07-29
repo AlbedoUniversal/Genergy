@@ -1,8 +1,45 @@
 @import '../css/libs/jquery.mCustomScrollbar.css';
 
 .scroll {
-  &-track {
+  margin: 15px 0;
 
+  &-item {
+    width: 262px;
+    height: 245px;
+    margin-right: 1px;
+    @include set(262, 244);
+    filter: grayscale(1);
+    border: 9px solid transparent;
+    background-position: center;
+
+    &:hover {
+      border-color: $bold-orange;
+      filter: grayscale(0);
+    }
+  }
+  
+  &-img {
+    width: 100%;
+  }
+
+  .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+    max-width: 1320px;
+    box-shadow: none;
+    height: 5px;
+    background-color: $rails-color;
+    border-radius: 0;
+    margin: 7px auto;
+  }
+
+  .mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+    max-width: 205px;
+    height: 12px;
+    transform: skew(-30deg);
+    border-radius: 0;
+    background-size: 10px 100%;
+    background-repeat: repeat-x;
+    background-size: 10px 100%;
+    
   }
 
 }

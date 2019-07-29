@@ -1,12 +1,10 @@
 const gulp         = require('gulp'),
-      plumber      = require('gulp-plumber'),
       sass         = require('gulp-sass'), 
       autoprefixer = require('gulp-autoprefixer'),
       concat       = require('gulp-concat'),
       cleanCSS     = require('gulp-clean-css'),
       rename       = require('gulp-rename'),
       uglify       = require('gulp-uglify'),
-      imagemin     = require('gulp-imagemin'),
       browserSync  = require('browser-sync');
 
 

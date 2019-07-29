@@ -12,10 +12,8 @@
 @include font-face(TTCommons-DemiBold, TTCommons-DemiBold);
 @include font-face(TTCommons-Medium, TTCommons-Medium);
 
-
 // ==================================================
 // ===========>COLORS<===============================
-
 
 $color-white: #ffffff;
 $black-link: #33383c;
@@ -38,6 +36,9 @@ $reviews-bg: #db6f00;
 $reviews-orange: #ffba8f;
 $tabs-nav-color: #292929;
 $tabs-money-color: #2c2c2c;
+$rails-color: #d3d3d3;
+$railbar-light: #8e8e8e;
+$railbar-dark: #383838;
 
 // ==================================================
 // ===========>MIXINS<===============================
@@ -63,7 +64,6 @@ $tabs-money-color: #2c2c2c;
     justify-content: space-between;
 }
 
-
 // ==================================================
 // ===========>ANIMATIONS<===============================
 
@@ -75,4 +75,3 @@ $tabs-money-color: #2c2c2c;
 //         background-image: linear-gradient(to top, #f6af19, #e66700);
 //     }
 // }
-
