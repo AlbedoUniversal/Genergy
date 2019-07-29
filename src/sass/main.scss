@@ -1,14 +1,15 @@
 
 @import '_bootstrap';
 @import 'vars';
+@import 'wonder';
 @import 'fonts';
 @import 'about';
 @import 'advantages';
 @import 'packs';
 @import '../css/libs/slick.css';
 @import 'stocks';
+@import 'recomendations';
 @import 'reviews';
-@import 'wonder';
 @import 'scroll';
 
 
@@ -171,11 +172,15 @@ body {
                     outline: none;
                     padding: 1.2em 2em;
                     line-height: 1;
-                    transition-duration: 0.5s;
+                    transition-duration: 0.3s;
+                    background-position: 0 100%;
                      
                     &:hover {
                         transform: scale(.9);
+                    }
 
+                    &:active {
+                        box-shadow: 0 -200px 100px -120px #e66700 inset;
                     }
                 }
             }
@@ -424,80 +429,6 @@ body {
         }
     }
 
-/////////////////////////////////////////////
-// <------------- RECOMENDATION BLOCK 6 ------------->
-////////////////////////////////////////////
-
-
-
-    .recomendations {
-        &-content {
-            max-width: 100rem;
-            margin: 0 auto;
-            &__text {
-                max-width: 886px;
-                display: flex;
-                flex-wrap: wrap;
-                margin: 0 auto;
-                justify-content: center;
-                position: relative;
-                z-index: 1;
-    
-                &::before {
-                    content: "";
-                    position: absolute;
-                    width: 844px;
-                    height: 184px;
-                    background-image: url(../images/s8/dotstop.png);
-                    z-index: -1;
-                }
-
-                &-description {
-                    text-align: center;
-                    max-width: 718px;
-                    font-size: 1.125em;
-                    line-height: 1.11;
-                    letter-spacing: 0.09px;
-                    color: $subheading-grey;
-                    font-family: PTSans-Regular;
-                }
-            }    
-       
-            &__road {
-                text-align: center;
-                position: relative;
-                .map {
-                    width: 100%;
-                }
-                .car {
-                    position: absolute;
-                    top: 10%;
-                    left: 19%;
-                }
-                .checkpoint-oil {
-                    position: absolute;
-                    top: 5.6%;
-                    right: 44%;
-                    display: flex;
-                    flex-direction: column-reverse;
-                    min-height: 180px;
-                    min-width: 185px;
-                    &__text {
-                        font-family: TTCommons;
-                        font-size: 21px;
-                        font-weight: normal;
-                        font-style: normal;
-                        font-stretch: normal;
-                        line-height: 0.95;
-                        letter-spacing: 0.11px;
-                        color: $heading-black;
-                        text-align: center;
-                    }
-                }
-            }
-        }
-    }
-
     .common-footer {
         overflow: hidden;
         .map {
@@ -607,7 +538,7 @@ body {
                         transform: rotate(45deg); 
                         opacity: 1;
                         scale: 2;
-                        transition: all 0.7s ease;
+                        transition: all 0.4s ease;
                     }
                 }
                 &__click {
@@ -755,7 +686,3 @@ body {
     }
 }
 @import 'media';
-
-
-
-    

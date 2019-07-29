@@ -4,13 +4,17 @@
   background-image: url('../images/s5/packs_bg.png');
   background-repeat: no-repeat;
   background-size: cover;
+
   &-content {
     max-width: 100rem;
     margin: 0 auto;
+
     &__done {
+
       .section-heading {
         color: $color-white;
       }
+
       &-exclusive {
         font-family: PTSans-Regular;
         font-size: 1.5em;
@@ -28,19 +32,27 @@
         max-width: 358px;
         margin: 0 auto;
         margin-top: 1.5em;
+
         span {
           display: block;
           transform: translate3d(0, 0, 0) skewX(15deg);
         }
+
       }
+
     }
+
     &__list {
       padding-top: 3.125em;
       margin-bottom: 50px;
+      max-width: 1140px;
+      margin: 0 auto;
+
       &-item {
-        min-width: 15em;
-        min-height: 15.125em;
-        margin-right: 1.25em;
+        width: 30%;
+        position: relative;
+        max-height: 15.125em;
+        border: 0.375em solid transparent;
         padding-bottom: 1.5em;
         padding-left: 2.625em;
         padding-right: 2.625em;
@@ -49,40 +61,43 @@
         line-height: normal;
         letter-spacing: 0.25px;
         background-size: cover;
+        background-position: center center;
         background-repeat: no-repeat;
         color: $color-white;
-        border: 0.375em solid transparent;
-        transition-duration: 0.5s; 
-        &:last-child {
-          margin-right: 0;
-        }
+        transition-duration: 0.3s; 
+        @include set();
+        filter: grayscale(1);
         
         &:hover, &.active.greyscale {
           border-color: $bold-orange;
           filter: grayscale(0);
-          
         }
-        &.passenger {
-          background-image: url('../images/s5/light.png');
-          background-position: center center;
-          filter: grayscale(1);
-        }
-        &.suv {
-          background-image: url('../images/s5/light.png');
-          background-position: center center;
-          filter: grayscale(1);
-        }
-        &.commercial {
-          background-image: url('../images/s5/light.png');
-          background-position: center center;
-          filter: grayscale(1);
-        }
+        
+        // &.passenger {
+        //   background-image: url('../images/s5/light.png');
+        //   background-position: center center;
+        //   filter: grayscale(1);
+        // }
+
+        // &.suv {
+        //   background-image: url('../images/s5/light.png');
+        //   background-position: center center;
+        //   filter: grayscale(1);
+        // }
+
+        // &.commercial {
+        //   background-image: url('../images/s5/light.png');
+        //   background-position: center center;
+        //   filter: grayscale(1);
+        // }
+
       }
 
       &-title {
         max-width: 8.917em;
         text-align: center;
       }
+
     }
 
     &__configuration {
@@ -111,8 +126,6 @@
       .nav-tabs .nav-item {
         margin-right: 18px;
         min-width: 132px;
-        // height: 48px;
-        // overflow: hidden;
       }
       
       .nav-tabs .nav-link {
@@ -149,7 +162,9 @@
             background-color: #fff;
             bottom: -9px;
           }
+
         }
+
       }
       &-desc {
         ul {
@@ -167,10 +182,11 @@
               margin-bottom: 1.5em;
               padding-left: .9em;
           }
+
         }
+
       }
-      &-buy {
-      }
+
       &-price {
         font-family: TTCommons;
         font-size: 2.5em;
@@ -179,37 +195,47 @@
         color: $tabs-money-color;
         padding-left: 1em;
       }
+
       .little {
         justify-self: flex-end; 
         padding: 0.8em 1.4em;
         margin-left: 1.875em;
       }
+
       &-pictures {
         position: relative;        
         padding-right: 2em;
+
         &__item {
           position: absolute;
+
           &:nth-child(2) {
             top: 44%;
             left: 12%;
           }
+
           &:nth-child(3) {
             top: 51%;
             left: 17%;
           }
+
           &:nth-child(4) {
             top: 35%;
             left: 30%;
           }
+
           &:nth-child(5) {
             top: 64%;
             left: 20%;
           }
+
           &:nth-child(6) {
             top: 48%;
             left: 35%;
           }
+
         }
+
         &__orangeball {
           position: absolute;
           top: 4%;
@@ -220,6 +246,7 @@
           border: 12px solid #f8ddc7;
           background-image: linear-gradient(to top,#e66700cc,#f6af19c7);
         }
+
         &__filtertext {
           font-family: PTSans-Regular;
           line-height: 1.33;
@@ -228,7 +255,16 @@
           font-weight: bold;
           font-size: 1.125em;
         }
+
+        &__filter {
+          max-width: 230px;
+          margin-top: -32px;
+        }
+
       }
+
     }
+
   }
+
 }

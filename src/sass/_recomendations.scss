@@ -1,0 +1,57 @@
+.recomendations {
+    &-content {
+        max-width: 100rem;
+        margin: 0 auto;
+
+        &__text {
+            max-width: 896px;
+            position: relative;
+            margin: 0 auto;
+            line-height: normal;
+            letter-spacing: normal;
+            z-index: 1;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 844px;
+                height: 184px;
+                left: 0;
+                top: -36px;
+                background-image: url(../images/s8/dotstop.png);
+                z-index: -1;
+            }
+
+            .section-heading {
+                margin-bottom: 23px;
+            }
+            
+            &-description {
+                padding: 0 86px;
+                font-size: 1.125em;
+                line-height: 1.11;
+                letter-spacing: 0.09px;
+                color: $subheading-grey;
+                font-family: PTSans-Regular;
+            }
+    
+        }    
+ 
+        &__road {
+            max-width: 1150px;
+            margin: 0 auto;
+            position: relative;
+
+            &-map {
+                width: 100%;
+            }
+
+            &-car {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+    }
+}

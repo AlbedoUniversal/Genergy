@@ -1,38 +1,38 @@
-const gulp         = require('gulp'),
-      sass         = require('gulp-sass'), 
-      autoprefixer = require('gulp-autoprefixer'),
-      concat       = require('gulp-concat'),
-      cleanCSS     = require('gulp-clean-css'),
-      rename       = require('gulp-rename'),
-      uglify       = require('gulp-uglify'),
-      browserSync  = require('browser-sync');
+const gulp = require('gulp'),
+  sass = require('gulp-sass'),
+  autoprefixer = require('gulp-autoprefixer'),
+  concat = require('gulp-concat'),
+  cleanCSS = require('gulp-clean-css'),
+  rename = require('gulp-rename'),
+  uglify = require('gulp-uglify-es').default,
+  browserSync = require('browser-sync');
 
 
-gulp.task('styles', function() {
+gulp.task('styles', function () {
   return gulp.src('./src/sass/main.scss')
-        .pipe(sass())
-        .pipe(autoprefixer())
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(cleanCSS())
-        .pipe(gulp.dest('./dist/css'))
-        .pipe(browserSync.stream());
+    .pipe(sass())
+    .pipe(autoprefixer())
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(cleanCSS())
+    .pipe(gulp.dest('./dist/css'))
+    .pipe(browserSync.stream());
 });
 
-gulp.task('scripts', function() {
-  return gulp.src([ './src/js/jquery-3.2.1.slim.min.js', './src/js/libs/*.js', './src/js/main.js' ])
-        .pipe(concat('main.js'))
-        .pipe(uglify())
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('./dist/js'))
-        .pipe(browserSync.reload({ stream: true }));
+gulp.task('scripts', function () {
+  return gulp.src(['./src/js/jquery-3.2.1.slim.min.js', './src/js/libs/**/*.js', './src/js/main.js'])
+    .pipe(concat('main.js'))
+    .pipe(uglify())
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest('./dist/js'))
+    .pipe(browserSync.reload({ stream: true }));
 });
 
-gulp.task('code', function() {
+gulp.task('code', function () {
   return gulp.src('./dist/*.html')
-        .pipe(browserSync.reload({ stream: true }));
+    .pipe(browserSync.reload({ stream: true }));
 });
 
-gulp.task('server', function() {
+gulp.task('server', function () {
   browserSync({
     server: {
       baseDir: './dist'
@@ -42,7 +42,7 @@ gulp.task('server', function() {
   });
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', function () {
   gulp.watch('./src/sass/**/*.scss', gulp.parallel('styles'));
   gulp.watch('./src/js/**/*.js', gulp.parallel('scripts'));
   gulp.watch('./dist/*.html', gulp.parallel('code'));

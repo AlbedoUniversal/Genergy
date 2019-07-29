@@ -19,19 +19,19 @@ $(document).ready(function () {
 
   // Parralax
   function Parallax(parent, children, smoothness) {
-    var parallaxChildren = document.querySelectorAll(children);
+    let parallaxChildren = document.querySelectorAll(children);
 
     document.querySelector(parent).onmousemove = function (e) {
-      var mY = e.clientY;
-      var mX = e.clientX;
+      let mY = e.clientY;
+      let mX = e.clientX;
 
       Array.from(parallaxChildren).forEach(function (child, i) {
         if (child.classList.contains('no-parallax')) {
           return;
         }
         requestAnimationFrame(function () {
-          var newY = Math.floor(mY * smoothness) * (i + 1);
-          var newX = Math.floor(mX * smoothness) * (i + 1);
+          let newY = Math.floor(mY * smoothness) * (i + 1);
+          let newX = Math.floor(mX * smoothness) * (i + 1);
 
           child.style.transform = 'translate3d(' + newX + 'px,' + newY + 'px,' + '0px)';
         });
@@ -43,16 +43,16 @@ $(document).ready(function () {
   Parallax('.questions', '.questions-content__picture img', 0.01);
 
   // Packs List active item
-  var packs = document.getElementsByClassName('packs-content__list-item');
+  let packs = document.getElementsByClassName('packs-content__list-item');
 
-  for (var i = 0; i < packs.length; i++) {
+  for (let i = 0; i < packs.length; i++) {
     packs[i].addEventListener('click', function () {
 
       if (this.classList.contains('active')) {
         return;
       } else {
 
-        for (var j = 0; j < packs.length; j++) {
+        for (let j = 0; j < packs.length; j++) {
           packs[j].classList.remove('active', 'greyscale');
         }
 
@@ -69,4 +69,3 @@ $(document).ready(function () {
   });
 
 });
-
