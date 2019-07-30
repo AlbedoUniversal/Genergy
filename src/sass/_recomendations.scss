@@ -1,4 +1,5 @@
 .recomendations {
+    padding-bottom: 100px;
     &-content {
         max-width: 100rem;
         margin: 0 auto;
@@ -58,11 +59,6 @@
                 flex-direction: column;
                 align-items: center;
 
-                &--1 {
-                    top: 4%;
-                    left: 45%;
-                }
-
                 .tech {
                     &-cursor {
                         margin-top: -60px;
@@ -77,6 +73,19 @@
                         box-shadow: 0 0 40px 0 rgba(172, 172, 172, 0.33);
                         background-color: #ffffff;
                         padding: 28px;
+                        z-index: 2;
+                        display: none;
+                        
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: -20px;
+                            left: 46%;
+                            border: 10px solid $white;
+                            border-top-color: transparent;
+                            border-left-color: transparent;
+                            border-right-color: transparent;
+                          }
                     }
                     
                     &-tooltext {
@@ -117,8 +126,174 @@
                         text-align: center;
                     }
                 }
+
+                &--1 {
+                    top: 4%;
+                    left: 45%;
+                }
+
+                &--2 {
+                    top: 10%;
+                    left: 92%;
+                    
+                    .tech-cursor {
+                        margin-top: -80px;
+                    }
+                }
+
+                &--3 {
+                    top: 30%;
+                    left: -3%;
+
+                    .tech {
+                        &-cursor {
+                            margin-top: -80px;
+                            margin-left: 30px;
+                        }
+
+                        &-heading {
+                            margin-top: 40px;
+                        }
+
+                    }
+                    
+                }
+
+                &--4 {
+                    top: 38%;
+                    left: 38%;
+
+                    .tech {
+                        &-cursor {
+                            margin-top: -100px;
+                            margin-left: 30px;
+                        }
+
+                        &-heading {
+                            margin-top: 55px;
+                        }
+
+                    }
+                }
+
+                &--5 {
+                    top: 45%;
+                    left: 94%;
+                    
+                    .tech {
+                        &-cursor {
+                            margin-top: -90px;
+                        }
+
+                        &-heading {
+                            margin-top: 55px;
+                        }
+
+                    }
+                }
+
+                &--6 {
+                    top: 62%;
+                    left: -3%;
+
+                    .tech {
+                        &-cursor {
+                            margin-top: -120px;
+                        }
+
+                        &-heading {
+                            margin-top: 40px;
+                        }
+
+                    }
+                }
+                
+                &--7 {
+                    top: 70%;
+                    left: 54%;
+                    
+                    .tech {
+                        &-cursor {
+                            margin-top: -80px;
+                            margin-left: -20px;
+                        }
+
+                        &-heading {
+                            margin-top: 40px;
+                        }
+
+                    }
+                }
+
+                &--8 {
+                    top: 78%;
+                    left: 94%;
+                    
+                    .tech {
+                        &-cursor {
+                            margin-top: -90px;
+                        }
+
+                        &-heading {
+                            margin-top: 55px;
+                        }
+
+                    }
+                }
+
+                &--9 {
+                    top: 86%;
+                    left: 32%;
+
+                    .tech {
+                        &-cursor {
+                            margin-top: -100px;
+                        }
+
+                        &-heading {
+                            margin-top: 60px;
+                        }
+
+                    }
+                    
+                }
+
+                &--10 {
+                    bottom: 30px;
+                    left: 0;
+                }
+
             }
+
+            &-desc {
+                font-size: 16px;
+                line-height: 1.13;
+                letter-spacing: 0.08px;
+                color: $subheading-grey;
+                text-align: right;
+            }
+
         }
 
+    }
+
+    &-leaves {
+        &--1 {
+            position: absolute;
+            top: -14%;
+            left: -20%;
+        }
+        
+        &--2 {
+            position: absolute;   
+            top: 45%;
+            left: -20%;
+        }
+        
+        &--3 {
+            position: absolute;   
+            left: -22%;
+            top: 93%;
+        }
     }
 }
