@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
   // Slick slider
   $('.stocks__slider').slick({
     slidesToShow: 2,
@@ -43,7 +42,7 @@ $(document).ready(function () {
   Parallax('.questions', '.questions-content__picture img', 0.01);
 
   // Packs List active item
-  let packs = document.getElementsByClassName('packs-content__list-item');
+  const packs = document.getElementsByClassName('packs-content__list-item');
 
   for (let i = 0; i < packs.length; i++) {
     packs[i].addEventListener('click', function () {
@@ -59,6 +58,27 @@ $(document).ready(function () {
         this.classList.add('active', 'greyscale');
       }
     });
+  }
+
+  // Packs Config details show
+  const packsConfItems = document.getElementsByClassName('packs-content__configuration-pictures__item');
+  const packsDetails = document.getElementsByClassName('packs-content__configuration-pictures__orangeball-inner');
+
+  for (let i = 0; i < packsConfItems.length; i++) {
+
+    packsConfItems[i].addEventListener('click', function () {
+
+      const detaiLink = this.dataset.detail;
+      const detail = document.querySelector(`[data-detail-show="${detaiLink}"]`);
+
+      for (let j = 0; j < packsDetails.length; j++) {
+        packsDetails[j].classList.remove('active');
+      }
+
+      detail.classList.add('active');
+
+    });
+
   }
 
   // Scroll Gallery
