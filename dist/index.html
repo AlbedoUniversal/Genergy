@@ -86,7 +86,7 @@
       </div>
     </div>
     <div class="about__picture-oil">
-      <img class="gear" src="images/s2/gear.png" alt="">
+      <img class="normgear" src="images/s2/normgear.png" alt="">
       <img class="oil" src="images/s2/oil.png" alt="">
       <img class="left-oil" src="images/s2/left_oil.png" alt="">
     </div>
@@ -213,15 +213,15 @@
       </div>
       <div class="packs-content__list d-flex justify-content-between">
         <div class="packs-content__list-item d-flex flex-column justify-content-end align-items-center passenger"
-          style="background-image: url(images/s5/light.png)">
+          style="background-image: url(images/s5/normkar.png)">
           <span class="packs-content__list-title">Для легковых автомобилей</span>
         </div>
         <div class="packs-content__list-item d-flex flex-column justify-content-end align-items-center suv"
-          style="background-image: url(images/s5/light.png)">
+          style="background-image: url(images/s5/normkar.png)">
           <span class="packs-content__list-title">Для внедорожников</span>
         </div>
         <div class="packs-content__list-item d-flex flex-column justify-content-end align-items-center commercial"
-          style="background-image: url(images/s5/light.png)">
+          style="background-image: url(images/s5/normkar.png)">
           <span class="packs-content__list-title">Для коммерческого автотранспорта</span>
         </div>
       </div>
@@ -376,34 +376,55 @@
             </div>
           </div>
           <div class="tab-pane fade" id="toConf" role="tabpanel" aria-labelledby="toConf">
-            <div class="tab-wrapp d-flex justify-content-between">
-              <div class="packs-content__configuration-desc">
-                <ul>
-                  <li>Повышенного расхода масла (свыше 0,5 л/1000 км);</li>
-                  <li>Снижение тяговых и динамических показателей двигателя;</li>
-                  <li>Нагара на свечах зажигания;</li>
-                  <li>Посторонних звуков, стуков во время работы ДВС;</li>
-                  <li>Повышенного расхода топлива;</li>
-                  <li>Подтекания масла;</li>
-                </ul>
-                <div class="packs-content__configuration-buy d-flex align-items-center">
-                  <div class="packs-content__configuration-price">500 ₽</div>
-                  <button class="header-tagline__promo-sign little">Хочу этот пакет</button>
+            <div class="tab-wrapp d-flex">
+              <form action="" class="d-flex justify-content-between">
+                <div class="packs-content__configuration-check">
+                  <h3 class="tab-wrapp__heading">
+                      <span class="d-block">Хотите заменить что-то</span><span class="d-block">конкретное? Выбирайте!</span>
+                  </h3>
+                  <ul class="packs-content__configuration-check-list">
+                    <li class="packs-content__configuration-check-item"><label class="box">
+                        <input class="box-click" type="checkbox" name="" checked=""><span
+                          class="box-mark"></span>
+                      </label>Повышенного расхода масла (свыше 0,5 л/1000 км);</li>
+                    <li class="packs-content__configuration-check-item"><label class="box">
+                        <input class="box-click" type="checkbox" name="" checked=""><span
+                          class="box-mark"></span>
+                      </label>Снижение тяговых и динамических показателей двигателя;</li>
+                    <li class="packs-content__configuration-check-item"><label class="box">
+                        <input class="box-click" type="checkbox" name="" checked=""><span
+                          class="box-mark"></span>
+                      </label>Нагара на свечах зажигания;</li>
+                    <li class="packs-content__configuration-check-item"><label class="box">
+                        <input class="box-click" type="checkbox" name="" checked=""><span
+                          class="box-mark"></span>
+                      </label>Посторонних звуков, стуков во время работы ДВС;</li>
+                    <li class="packs-content__configuration-check-item"><label class="box">
+                        <input class="box-click" type="checkbox" name="" checked=""><span
+                          class="box-mark"></span>
+                      </label>Повышенного расхода топлива;</li>
+                    <li class="packs-content__configuration-check-item"><label class="box">
+                        <input class="box-click" type="checkbox" name="" checked=""><span
+                          class="box-mark"></span>
+                      </label>Подтекания масла;</li>
+                  </ul>
                 </div>
-              </div>
-              <div class="packs-content__configuration-pictures">
-                <img src="images/s5/tab_car.png" alt="" srcset="">
-                <img src="images/s5/plus.png" alt="" class="packs-content__configuration-pictures__item">
-                <img src="images/s5/plus.png" alt="" class="packs-content__configuration-pictures__item">
-                <img src="images/s5/plus.png" alt="" class="packs-content__configuration-pictures__item">
-                <img src="images/s5/plus.png" alt="" class="packs-content__configuration-pictures__item">
-                <img src="images/s5/plus.png" alt="" class="packs-content__configuration-pictures__item">
-                <div
-                  class="packs-content__configuration-pictures__orangeball d-flex justify-content-end align-items-center flex-column">
-                  <p class="packs-content__configuration-pictures__filtertext">Масляный фильтр</p>
-                  <img class="packs-content__configuration-pictures__filter" src="images/s5/filter.png" alt="">
-
-                </div>
+                <div class="packs-content__configuration-constructor d-flex flex-column align-items-start">
+                  <h3 class="packs-content__configuration-constructor-heading">Оставьте свои контакты и наш
+                      менеджер рассчитает стоимость
+                      <span class="bold-orange">конкретно этого ТО</span> за 5 минут!</h3>
+                  <label for="name"   class="packs-content__configuration-constructor-data">
+                    <input class="packs-content__configuration-constructor-enter" name="name" id="name" placeholder="Ваше имя" type="text"></label>
+                  <label for="telephone" class="packs-content__configuration-constructor-data">
+                    <input class="packs-content__configuration-constructor-enter" id="telephone" placeholder="Ваш номер телефона" type="telephone"></label>
+                  <label for="vin" class="packs-content__configuration-constructor-data">
+                    <input class="packs-content__configuration-constructor-enter"  placeholder="VIN автомобиля" id="vin" name="vin" type="text"></label>
+                  <label for="message" class="packs-content__configuration-constructor-data">
+                    <textarea  style="resize: none" class="packs-content__configuration-constructor-enter message" placeholder="Особые пожелания"></textarea>
+                  </label>
+                    <button class="align-self-center header-tagline__promo-sign little">Узнать цену</button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>

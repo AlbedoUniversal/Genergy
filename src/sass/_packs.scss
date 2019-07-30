@@ -52,7 +52,7 @@
         width: 30%;
         position: relative;
         max-height: 15.125em;
-        border: 0.375em solid transparent;
+        border: 0.375em solid $border-grey;
         padding-bottom: 1.5em;
         padding-left: 2.625em;
         padding-right: 2.625em;
@@ -67,7 +67,6 @@
         transition-duration: 0.3s; 
         @include set();
         filter: grayscale(1);
-        
         &:hover, &.active.greyscale {
           border-color: $bold-orange;
           filter: grayscale(0);
@@ -115,7 +114,15 @@
 
       .tab-pane {
         padding-bottom: 30px;
+        padding-top: 30px;
 
+        &#toConf {
+          padding-top: 70px;
+
+          form {
+            width: 100%;
+          }
+        }
       }
 
       .nav-tabs {
@@ -175,18 +182,175 @@
             list-style-image: url(../images/s7/check.png);
             font-size: 18px;
             font-family: PTSans-Regular;
-              line-height: 24px;
-              letter-spacing: 0.09px;
-              text-align: left;
-              color: $heading-black;
-              margin-bottom: 1.5em;
-              padding-left: .9em;
+            line-height: 24px;
+            letter-spacing: 0.09px;
+            text-align: left;
+            color: $heading-black;
+            margin-bottom: 1.5em;
+            padding-left: .9em;
           }
-
         }
-
       }
 
+      form {
+        position: relative;
+        margin-left: 40px;
+        // width: 100%;
+  
+        .tab-wrapp__heading {
+          font-family: TTCommons;
+          font-size: 30px;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 0.93;
+          letter-spacing: 0.75px;
+          background-color: $color-white;
+          position: absolute;
+          z-index: 1;
+          top: 5px;
+          padding-right: 20px;
+        }
+      }
+      &-check {
+        &-list {
+          margin-top: 3.125em;
+          padding-left: 0px;
+          padding-right: 30px;
+          padding-top: 30px;
+          padding-bottom: 30px;
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 120%;
+            height: 100%;
+            border: 9px solid $border-grey;
+            z-index: 0;
+          }
+        }
+        &-item {
+          list-style-type: none;
+          font-size: 18px;
+          font-family: PTSans-Regular;
+          line-height: 24px;
+          letter-spacing: 0.09px;
+          text-align: left;
+          color: $heading-black;
+          margin-bottom: 1.5em;
+
+          .box {
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 17px;
+            z-index: 1;
+            cursor: pointer;
+            &::before {
+              content: "";
+              height: 68px;
+              width: 11px;
+              position: absolute;
+              background-color: $color-white;
+              left: 0;
+              top: -22px;
+            }
+
+            &-click {
+              position: absolute;
+              cursor: pointer;
+              top: 0;
+              left: 0;
+              opacity: 0;
+            }
+
+            &-mark {
+              position: absolute;
+              top: 0;
+              left: -22%;
+              height: 25px;
+              width: 25px;
+              border-radius: 50%;
+              z-index: 2;
+              box-shadow: inset 0 0 8px 0 rgba(238, 139, 13, 0.58);
+              background-color: $color-white;
+
+
+              &::after {
+                content: "";
+                position: absolute;
+                left: 20%;
+                top: 22%;
+                width: 15px;
+                height: 15px;
+                background-image: url('../images/s5/Check-Icon.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center center; 
+                opacity: 1;
+                transform: scale(1);
+                transition: all .6s ease;
+              }
+            }
+            
+            & .box-click:checked ~ .box-mark {
+              box-shadow: inset 0 0 8px 0 rgba(122, 122, 122, 0.58);
+              
+            }
+            & .box-click:checked ~ .box-mark::after {
+              opacity: 0;
+              transform: scale(0);
+            }
+          }
+        }
+      }
+      &-constructor {
+        margin-right: 80px;
+        &-heading {
+          max-width: 337px;
+          margin-bottom: 0.8em;
+          font-family: TTCommons;
+          font-size: 24px;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.17;
+          letter-spacing: 0.6px;
+          text-align: left;
+          color: $tabs-money-color;
+        }
+        &-data {
+          margin-bottom: 0.8em;
+        }
+        &-enter {
+          opacity: 0.85;
+          border-radius: 18px;
+          box-shadow: inset 0 0 8px 0 rgba(84, 83, 83, 0.58);
+          background-color: #ffffff;
+          outline: none;
+          width: 17.875em;
+          font-family: PTSans-Regular;
+          font-size: 18px;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: 0.09px;
+          text-align: left;
+          padding: 10px 0px 10px 10px;
+          border: none;
+          
+          &::placeholder {
+            color: $packs-grey;
+          }
+        }
+        .message {
+          min-height: 84px;
+          margin-bottom: 2em;
+        }
+      }
+     
+      
       &-price {
         font-family: TTCommons;
         font-size: 2.5em;
@@ -199,7 +363,6 @@
       .little {
         justify-self: flex-end; 
         padding: 0.8em 1.4em;
-        margin-left: 1.875em;
       }
 
       &-pictures {

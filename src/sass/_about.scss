@@ -84,22 +84,23 @@
   }
 
   &__picture {
+    position: relative;
     &-oil {
       position: absolute;
       left: 0;
       top: 0;
 
-      .gear {
-        position: absolute;
-        max-width: 39.3125rem;
-        left: 13rem;
-        top: -2rem;
-      }
+      .normgear {
+          position: absolute;
+          left: 13rem;
+          top: -2rem;
+          width: 622px;
+        }
 
       .oil {
         position: absolute;
         max-width: 19.5rem;
-        left: 32.375rem;
+        left: 30.375rem;
         top: 11rem;
       }
 
