@@ -8,18 +8,103 @@
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 22222222;
+
     form {
+        .header-tagline__promo-sign.little {
+            padding: .65em 2em;
+        }
+
+        .checkboxes {
+            position: relative;
+            left: -12%;
+            margin-bottom: 12px;
+            cursor: pointer;
+            transition: all .3s ease;
+            transform: scale(1);
+           
+            & .click:checked ~ .checkmark {
+                background-color: #bfc0c2;
+                transition: all 4s ease;
+            }
+
+            & .click:checked ~ .checkmark:after {
+                opacity: 0;
+                scale: 0;
+            }
+
+            & .checkmark:after {
+                left: 40%;
+                top: 29%;
+                width: 5px;
+                height: 10px;
+                border: solid $color-white;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg); 
+                opacity: 1;
+                scale: 2;
+                transition: all 0.4s ease;
+            }
+        }
+
+        .click {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+            background-color: #bfc0c2;
+        }
+
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            background-color: #bfc0c2;
+
+            &:after {
+                content: "";
+                position: absolute;
+                // display: none;
+                opacity: 0;
+            }
+        }
+
+        .personality {
+            font-size: 0.938em;
+            font-family: PTSans-Regular;
+            font-style: italic;
+            color: $input-link-grey;
+            letter-spacing: 0.08px;
+            margin-top: 1.3em;
+            position: relative;
+
+            &-link {
+                color: #ffac33;
+                text-decoration: none;
+
+                &:hover {
+                    border-bottom: 1px solid #ffac33;
+                }
+            }
+        }
+    }
+    
+    &--callrequest {
         max-width: 480px;
         min-height: 700px;
+        padding: 36px 60px;
         display: flex;
         justify-content: center;
         border-radius: 20px;
         border: solid 10px #e2e2e2;
         background-color: #ffffff;
-        padding: 36px 60px;
         position: relative;
         overflow: hidden;
         z-index: 1;
+
         &::before {
             content: "";
             position: absolute;
@@ -34,19 +119,23 @@
             background-position-x: -20%;
             
         }
+
         .packs-content__configuration-constructor {
             margin-right: 0;
-            width: 320px;
+            max-width: 320px;
+
             &-logo {
                 text-align: center;
                 margin-bottom: 1.250em;
             }
+
             &-heading {
                 font-family: TTCommons;
                 font-size: 20px;
                 line-height: 1.4;
                 letter-spacing: 0.5px;
             }
+
             &-desc {
                 font-family: TTCommons;
                 font-size: 20px;
@@ -57,6 +146,7 @@
                 margin-bottom: 0.800em;
                 align-self: baseline;
             }
+
             &-list {
                 padding-left: 0;
                 width: 320px;
@@ -67,8 +157,10 @@
 
                 
             }
+
             &-link {
                 list-style-type: none;
+
                 .box {
                     height: 70px;
                     position: relative;                  
@@ -76,7 +168,7 @@
                     flex-direction: column-reverse;
                     align-items: center;
                     cursor: pointer;
-                      z-index: 1;
+                    z-index: 1;
 
                     font-family: PTSans-Regular;
                     font-size: 18px;
@@ -106,6 +198,7 @@
                         z-index: 2;
                         box-shadow: inset 0 0 8px 0 rgba(238, 139, 13, 0.58);
                         background-color: $color-white;
+
                         &::after {
                             content: "";
                             position: absolute;
@@ -126,100 +219,88 @@
                     & .box-click:checked ~ .box-mark {
                         box-shadow: inset 0 0 8px 0 rgba(122, 122, 122, 0.58);
                     }
+
                     & .box-click:checked ~ .box-mark::after {
                         opacity: 0;
                         transform: scale(0);
                     }
+
                     & .box-click:checked {
                         color: rgb(211, 55, 55);
                     }
                 }
             }
 
-            .mb {
+            .message {
                 margin-bottom: 0;
-                .message {
-                    margin-bottom: 0;
-                }
             }
-            .checkboxes {
-                position: relative;
-                left: -12%;
-                // padding-left: 60px;
-                margin-bottom: 12px;
-                cursor: pointer;
-                transition: all .3s ease;
-                transform: scale(1);
-               
 
-                & .click:checked ~ .checkmark {
-                    background-color: #bfc0c2;
-                    transition: all 4s ease;
-                    // transform: scale(1);
-                }
-                & .click:checked ~ .checkmark:after {
-                    opacity: 0;
-                    scale: 0;
-                }
-                & .checkmark:after {
-                    left: 40%;
-                    top: 29%;
-                    width: 5px;
-                    height: 10px;
-                    border: solid $color-white;
-                    border-width: 0 2px 2px 0;
-                    transform: rotate(45deg); 
-                    opacity: 1;
-                    scale: 2;
-                    transition: all 0.4s ease;
-                }
-            }
-            .click {
-                position: absolute;
-                opacity: 0;
-                cursor: pointer;
-                height: 0;
-                width: 0;
-                background-color: #bfc0c2;
-            }
-            .checkmark {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 25px;
-                width: 25px;
-                border-radius: 50%;
-                background-color: #bfc0c2;
-                &:after {
-                    content: "";
-                    position: absolute;
-                    // display: none;
-                    opacity: 0;
-                }
-            }
-            .personality {
-                font-size: 0.938em;
-                font-family: PTSans-Regular;
-                font-style: italic;
-                color: $input-link-grey;
-                letter-spacing: 0.08px;
-                margin-top: 1.3em;
-                position: relative;
-                // margin-bottom: 1em;
-
-                &-link {
-                    color: #ffac33;
-                    text-decoration: none;
-
-                    &:hover {
-                        border-bottom: 1px solid #ffac33;
-                    }
-                }
-            }
             .header-tagline__promo-sign {
                 padding: 1em 1.5em;
                 margin-top: 1em;
             }
         }
     }
+
+    &--configuration {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        padding: 36px 40px;
+        border-radius: 20px;
+        border: solid 10px #e2e2e2;
+        background-color: #ffffff;
+        overflow: hidden;
+        z-index: 1;
+
+        .packs-content__configuration {
+            &-constructor {
+                margin-right: 0;
+                
+                &-heading {
+                    margin-top: 23px;
+                    max-width: 100%;
+                    font-size: 20px;
+                    line-height: 1.4;
+                    letter-spacing: 0.5px;
+                }
+
+                &-subheading {
+                    font-size: 16px;
+                    font-family: PTSans-Regular;
+                    line-height: normal;
+                    letter-spacing: 0.08px;
+                    color: $packs-grey;
+                    margin-bottom: 30px;
+                }
+
+                &-data {
+                    margin-right: 10px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    #name, #telephone {
+                        max-width: 172px;
+                    }
+                }
+
+                &-enter {
+                    text-align: center;
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+
+                .wrap-personality {
+                    margin-left: 32px !important;
+                    margin-bottom: 30px;
+                }
+
+            }
+
+        }
+
+    }
+
 }

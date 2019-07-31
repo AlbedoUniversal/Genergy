@@ -1123,54 +1123,88 @@
     </footer>
   </div>
 
-
   <section class="modal">
-    <form action="">
+    <form action="" class="modal--callrequest">
       <div class="packs-content__configuration-constructor d-flex flex-column align-items-center">
         <img src="images/s1/logo.png" alt="" class="packs-content__configuration-constructor-logo">
-        <p class="packs-content__configuration-constructor-heading">Оставьте свои контакты и наш менеджер перезвонит Вам в течение 5 минут!</p>
+        <p class="packs-content__configuration-constructor-heading">Оставьте свои контакты и наш менеджер перезвонит Вам
+          в течение 5 минут!</p>
         <label for="name" class="packs-content__configuration-constructor-data">
-          <input class="packs-content__configuration-constructor-enter" name="name" id="name"
-            placeholder="Ваше имя" type="text"></label>
+          <input class="packs-content__configuration-constructor-enter" name="name" id="name" placeholder="Ваше имя"
+            type="text"></label>
         <label for="telephone" class="packs-content__configuration-constructor-data">
-          <input class="packs-content__configuration-constructor-enter" id="telephone"
-            placeholder="Ваш номер телефона" type="telephone"></label>
+          <input class="packs-content__configuration-constructor-enter" id="telephone" placeholder="Ваш номер телефона"
+            type="telephone"></label>
         <label for="vin" class="packs-content__configuration-constructor-data">
-          <input class="packs-content__configuration-constructor-enter" placeholder="VIN автомобиля" id="vin"
-            name="vin" type="text"></label>
+          <input class="packs-content__configuration-constructor-enter" placeholder="VIN автомобиля" id="vin" name="vin"
+            type="text"></label>
         <p class="packs-content__configuration-constructor-desc">Выберите услугу</p>
         <ul class="packs-content__configuration-constructor-list d-flex justify-content-around">
           <li class="packs-content__configuration-constructor-link">
             <label class="box">
               <input class="box-click" type="checkbox" name="" checked="">
               <span class="box-mark"></span> ТО
-            </label> 
+            </label>
           </li>
           <li class="packs-content__configuration-constructor-link">
             <label class="box">
               <input class="box-click" type="checkbox" name="" checked="">
               <span class="box-mark"></span> Авторемонт
-            </label> 
+            </label>
           </li>
           <li class="packs-content__configuration-constructor-link">
             <label class="box">
               <input class="box-click" type="checkbox" name="" checked="">
               <span class="box-mark"></span> Запчасти
-            </label> 
+            </label>
           </li>
         </ul>
-        <label for="message" class="packs-content__configuration-constructor-data mb">
+        <label for="message" class="packs-content__configuration-constructor-data mb-0">
           <textarea style="resize: none" class="packs-content__configuration-constructor-enter message"
             placeholder="Особые пожелания"></textarea>
         </label>
         <div class="d-flex align-items-center">
           <label class="checkboxes">
-            <input class="click" type="checkbox" name="" checked="checked"><span
-              class="checkmark"></span>
+            <input class="click" type="checkbox" name="" checked="checked"><span class="checkmark"></span>
           </label>
-          <p class="personality"> Я согласен на обработку <a
-              class="personality-link" href="#">персональных данных</a></p>
-          </div>
+          <p class="personality"> Я согласен на обработку <a class="personality-link" href="#">персональных данных</a>
+          </p>
+        </div>
+        <button class="align-self-center header-tagline__promo-sign little">Заказать звонок</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="modal">
+    <form action="" class="modal--configuration">
+      <div class="packs-content__configuration-constructor d-flex flex-column align-items-start">
+        <img src="images/s1/logo.png" alt="" class="packs-content__configuration-constructor-logo align-self-center">
+        <p class="packs-content__configuration-constructor-heading mb-0">Добрый день! Вы выбрали готовый пакет <span
+            class="bold-orange">ТО 1 для
+            коммерческого автомобиля</span></p>
+        <p class="packs-content__configuration-constructor-subheading">Оставьте нам свои контактные данные и наш
+          менеджер перезвонит Вам в течение 5 минут!</p>
+        <div class="d-flex">
+          <label for="name" class="packs-content__configuration-constructor-data">
+            <input class="packs-content__configuration-constructor-enter" name="name" id="name" placeholder="Ваше имя"
+              type="text">
+          </label>
+          <label for="telephone" class="packs-content__configuration-constructor-data">
+            <input class="packs-content__configuration-constructor-enter" id="telephone"
+              placeholder="Ваш номер телефона" type="telephone">
+          </label>
+          <label for="vin" class="packs-content__configuration-constructor-data">
+            <input class="packs-content__configuration-constructor-enter" placeholder="VIN автомобиля" id="vin"
+              name="vin" type="text">
+          </label>
+        </div>
+        <div class="d-flex align-items-center wrap-personality">
+          <label class="checkboxes">
+            <input class="click" type="checkbox" name="" checked="checked"><span class="checkmark"></span>
+          </label>
+          <p class="personality"> Я согласен на обработку <a class="personality-link" href="#">персональных данных</a>
+          </p>
+        </div>
         <button class="align-self-center header-tagline__promo-sign little">Заказать звонок</button>
       </div>
     </form>

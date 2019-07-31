@@ -1,18 +1,18 @@
-
 @import '_bootstrap';
 @import 'vars';
 @import 'wonder';
-@import 'fonts';
 @import 'about';
+@import 'help';
 @import 'advantages';
 @import 'packs';
 @import '../css/libs/slick.css';
 @import 'stocks';
+@import 'details';
 @import 'recomendations';
 @import 'reviews';
-@import 'modalWindow';
 @import 'scroll';
-
+@import 'footer';
+@import 'modal';
 
 html {
     font-size: 16px;
@@ -22,14 +22,20 @@ p {
     margin-bottom: 0;
 }
 
+.mb-0 {
+    margin-bottom: 0;
+}
+
 .section-heading {
     font-size: 2.625rem;
     color: $help-heading;
     font-family: TTCommons-DemiBold;
-    .bold-orange {
-        font-weight: bold;
-        color: $bold-orange;
-    }
+
+}
+
+.bold-orange {
+    font-weight: bold;
+    color: $bold-orange;
 }
 
 body {
@@ -43,6 +49,7 @@ body {
         margin-bottom: 4.125rem;
         min-height: 53rem;
         overflow: hidden;
+
         &-orange {
             position: absolute;
             z-index: 0;
@@ -52,38 +59,45 @@ body {
             right: -11.625rem;
             background-color: $bg-orange;
         }
+
         &-content {
             max-width: 100rem;
             margin: 0 auto;
             z-index: 1;
             position: relative;
         }
+
         &-nav {
             padding-bottom: 4.25rem;
         }
+
         &-menu {
             &__item {
                 line-height: 14px;
                 list-style-type: none;
             }
+
             &__tel {
                 font-size: 1.25rem;
                 font-family: TTCommons;
                 color: $black-link;
                 text-decoration: none;
             }
+
             &__address {
                 font-family: PTSans-Regular;
                 font-size: 0.875rem;
                 user-select: none;
                 margin: 0;
             }
+
             &__time {
                 user-select: none;
                 font-family: TTCommons;
                 font-size: 1.0625rem;
                 color: $color-white;
             }
+
             &__ordercall {
                 border-radius: 2.250em;
                 border: solid 0.167em $color-white;
@@ -107,14 +121,18 @@ body {
                 }
             }
         }
+
         &-tagline {
             padding-left: 2rem;
+
             &__text {
                 flex-basis: 40%;
             }
+
             &__headings {
                 padding-bottom: 2.4375rem;
             }
+
             &__heading {
                 font-family: TTCommons-DemiBold;
                 font-size: 3.5rem;
@@ -123,12 +141,14 @@ body {
                 line-height: normal;
                 padding-left: 5.75rem;
             }
+
             &__subheading {
                 font-size: 1.625rem;
                 color: $subheading-grey;
                 font-family: TTCommons;
                 padding-left: 5.75rem;
             }
+
             &__promo {
                
                 &-text {
@@ -140,6 +160,7 @@ body {
                     z-index: 3;
                     left: 1.25rem;
                 }
+
                 &-heading {
                     font-size: 1.625rem;
                     color: $heading-black;
@@ -148,12 +169,14 @@ body {
                         color: $bold-orange;
                     }
                 }
+
                 &-subheading {
                     font-family: PTSans-Regular;
                     color: $subheading-grey;
                     letter-spacing: 0.09px;
                     font-size: 1.2rem;  
                 }
+
                 &-button {
                     width: 19.4375rem;
                     background-color: $color-white;
@@ -162,6 +185,7 @@ body {
                     bottom: -50px;
 
                 }
+
                 &-sign {                 
                     border: 8px solid rgb(248, 221, 199);
                     background-image: linear-gradient(to top, #e66700 0%, #f6af19 100%);
@@ -185,503 +209,23 @@ body {
                     }
                 }
             }
+
             &__picture {
                 flex-basis: 60%;
                 position: relative;
+
                 &-man {
                     position: absolute;
                     z-index: 2;
                     right: 9.5rem;
                     bottom: -1.5rem;
                 }
+
                 &-car {
                     position: absolute;
                     z-index: 1;
                     left: 7.25rem;
                 }
-            }
-        }
-    }
-
-/////////////////////////////////////////////
-// <------------- HELP BLOCK 4 ------------->
-////////////////////////////////////////////
-
-    .help {
-        margin-top: 5rem;
-        &-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, 21.25rem);
-            grid-template-rows: repeat(2, 1fr);
-            column-gap: 2rem;
-            row-gap: 2rem;
-            justify-content: center;
-            margin-top: 2.4rem;
-            &__item {
-                position: relative;
-                min-height: 16.875rem;
-                transition: 0.5s;
-                &:nth-child(1) {
-                    background-image: url('../images/s4/1.png');
-                } 
-                &:nth-child(2) {
-                    background-image: url('../images/s4/5.png');
-                } 
-                &:nth-child(3) {
-                    background-image: url('../images/s4/3.png');
-                } 
-                &:nth-child(4) {
-                    background-image: url('../images/s4/4.png');
-                } 
-                &:nth-child(5) {
-                    background-image: url('../images/s4/5.png');
-                } 
-                &:nth-child(6) {
-                    background-image: url('../images/s4/6.png');
-                } 
-            }
-            &__heading {
-                font-family: TTCommons-DemiBold;
-                font-size: 2.25rem;
-                line-height: 0.97;
-                letter-spacing: 0.18px;
-                font-weight: 600;
-                color: $color-white;
-                position: absolute;
-                z-index: 2;
-                bottom: 0;
-                padding: 60px 27px;
-                transition: 0.3s;
-            }
-
-            &__description {
-                color: $heading-black;
-                line-height: 1.13;
-                letter-spacing: 0.08px;
-                font-size: 1rem;
-                font-family: PTSans-Regular;
-                position: absolute;
-                top: 70px;
-                opacity: 0;
-                height: 0;
-                visibility: hidden;
-                transition: .7s;
-            }
-
-            &__overlay {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-image: url('../images/s4/overlay.png');
-                z-index: 1;
-            }
-
-            &__arrow {
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                z-index: 3;
-                padding: 40px 27px;
-            }
-
-            &__item:hover {
-                background-image: none;
-                border:  solid 9px $border-grey;
-                padding: 20px;
-                transition: 0.5s;
-            }
-
-            &__item:hover .help-list__heading {
-                color: $heading-black;
-                top: 20px;
-                padding: 0;
-                font-size: 1.875rem;
-            }
-            &__item:hover .help-list__description {
-                top: 30px;
-                left: 3%;
-                opacity: 1;
-                visibility: visible;
-                margin-top: 3.5rem;
-            }
-
-            &__item:hover .help-list__overlay {
-                display: none;
-            }
-
-            &__item:hover .help-list__arrow {
-                left: 40%;
-                opacity: 0;
-                transition: 0.5s;
-            }
-        }
-        &-more {
-            margin-top: 3.3em;
-            margin-bottom: 4em;
-        }
-    }
-
-
-/////////////////////////////////////////////
-// <------------- SLIDER BLOCK 4 ------------->
-////////////////////////////////////////////
-
-    .stocks {
-        margin-bottom: 5em;
-    } 
-
-
-/////////////////////////////////////////////
-// <------------- SLIDER BLOCK 5 ------------->
-////////////////////////////////////////////
-
-
-    .details {
-        position: relative;
-        margin-bottom: 7em;
-        &:before {
-            content: "";
-            position: absolute;
-            width: 1011px;
-            height: 484px;
-            background-image: url(../images/s7/dots.png);
-        }
-        
-        &-item {
-            max-width: 100rem;
-            margin: 0 auto;
-
-            &__text {
-                flex-basis: 45%;
-                position: relative;
-                right: -5%;
-        
-
-                .section-heading {
-                    text-align: left;
-                    line-height: 1.4;
-                    margin-bottom: 1em;
-                }
-            }
-            &__list {
-                list-style-image: url(../images/s7/check.png);
-            }
-            &__link {
-                font-size: 18px;
-                line-height: 1.11;
-                letter-spacing: 0.09px;
-                text-align: left;
-                color: $heading-black;
-                font-family: PTSans-Regular;
-                margin-bottom: 1.5em;
-                padding-left: .4em;
-            }
-
-            &__picture {
-                flex-basis: 55%;
-                position: relative;
- 
-                img {
-                    transform: translate3d(0,0,0);
-                    transition: transform 0.2s ease;
-                    backface-visibility: hidden;
-                    transform-style: preserve-3d;
-                }
-            }
-
-            &__gear {
-                position: absolute;
-                width: 100%;
-            }
-
-            &__spare {
-                position: absolute;
-                 bottom: 18%;
-                 left: 10%;
-                 width: 90%;
-            }
-            &__oil {
-                position: absolute;
-                left: 1%;
-                bottom: 15%;
-            }
-
-            &__small {
-                position: absolute;
-                right: 360px;
-            }
-            &__little {
-                position: absolute;
-                bottom: 94px;
-                left: -26%;
-            }
-            &__big {
-                position: absolute;
-                bottom: 0;
-                left: 100%;
-            }
-            &__big2 {
-                position: absolute;
-                right: 182%;
-                top: 10%;
-                z-index: -1;
-            }
-        }
-    }
-
-    .common-footer {
-        overflow: hidden;
-        .map {
-            &-content {
-                margin: 0 auto;
-            }
-        }
-
-        .questions {
-            .questions-content {
-                margin: 0 auto;
-                background-image: url('../images/s12/footer.png');
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center;
-                justify-content: space-evenly;
-
-                &__picture {
-                    position: relative;
-                    min-height: 19.188em;
-                    width: 17.750em;
-
-                    img {
-                        transform: translate3d(0,0,0);
-                        transition: transform 0.2s ease;
-                        backface-visibility: hidden;
-                        transform-style: preserve-3d;
-                    }
-
-                    &-worker {
-                        position: absolute;
-                        right: -30%;
-                        bottom: 0;
-                    }
-                    &-leftgears {
-                        position: absolute;
-                        left: -30%;
-                        top: -7%;
-                    }
-                    &-leftsmallgears {
-                        position: absolute;
-                        left: 13%;
-                        bottom: 0;
-                    }
-                    &-rightgear {
-                        position: absolute;
-                        right: -1390px;
-                        top: 40px;
-                    }
-                    &-rightsmallgear {
-                        position: absolute;
-                        right: -1100px;
-                        bottom: 0;
-                    }
-                }
-                &__text {
-                    position: relative;
-                    
-                }
-                &__heading {
-                    font-family: TTCommons-Medium;
-                    font-size: 2.625em;
-                    font-weight: 500;
-                    text-align: left;
-                    color: $color-white;
-                    letter-spacing: 0.42px;
-                }
-                &__inputs {
-                    flex-direction: column;
-                    .name {
-                        @include questions-input;
-                    }
-                    .telephone {
-                        @include questions-input;
-                        margin-left: 1.563em;
-                    }
-                    .call {
-                        padding: 0.6em 2em;
-                        border: solid 6px rgb(148, 124, 105);
-                        margin-left: 1.563em;
-                    }
-                }
-                &__checkboxes {
-                    position: relative;
-                    padding-left: 35px;
-                    margin-bottom: 12px;
-                    cursor: pointer;
-                    transition: all .3s ease;
-                    transform: scale(1);
-
-                    & .questions-content__click:checked ~ .questions-content__checkmark {
-                        background-color: #7f7f7f;
-                        transition: all 4s ease;
-                        // transform: scale(1);
-                    }
-                    & .questions-content__click:checked ~ .questions-content__checkmark:after {
-                        opacity: 0;
-                        scale: 0;
-                    }
-                    & .questions-content__checkmark:after {
-                        left: 40%;
-                        top: 29%;
-                        width: 5px;
-                        height: 10px;
-                        border: solid $color-white;
-                        border-width: 0 2px 2px 0;
-                        transform: rotate(45deg); 
-                        opacity: 1;
-                        scale: 2;
-                        transition: all 0.4s ease;
-                    }
-                }
-                &__click {
-                    position: absolute;
-                    opacity: 0;
-                    cursor: pointer;
-                    height: 0;
-                    width: 0;
-                    background-color: #7f7f7f;
-                }
-                &__checkmark {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    height: 25px;
-                    width: 25px;
-                    border-radius: 50%;
-                    background-color: #7f7f7f;
-                    &:after {
-                        content: "";
-                        position: absolute;
-                        // display: none;
-                        opacity: 0;
-                    }
-                }
-                &__personality {
-                    font-size: 0.938em;
-                    font-family: PTSans-Regular;
-                    font-style: italic;
-                    color: $input-link-grey;
-                    letter-spacing: 0.08px;
-                    margin-top: 1.438em;
-                    position: relative;
-
-                    &-link {
-                        color: $color-white;
-                        text-decoration: none;
-
-                        &:hover {
-                            border-bottom: 1px solid #ffffff54;
-                        }
-                    }
-                }
-            }
-        }
-        .footer {
-            background-color: $footer-bg;
-            position: relative;
-            z-index: 1;
-            &-content {
-                margin: 0 auto;
-                min-height: 12.000em;
-                max-width: 90rem;
-                &__logo {
-                    @include footer-item; 
-                    &-picture {
-
-                    }
-                    &-copyright {
-                        font-size: 0.975em;
-                        color: $copyright-grey;
-                        line-height: normal;
-                        font-family: PTSans-Regular;
-                    }
-                }
-                &__social {
-                    @include footer-item; 
-                    &-heading {
-                        font-size: 1.100em;
-                        font-family: PTSans-Regular;
-                        line-height: normal;
-                        color: $social-grey;
-                    }
-                    &-item:hover {
-                        background-color: #e66700;
-                        border-radius: 50%;
-                        box-shadow:  0 0 15px rgba(233, 140, 53, 0.5);
-                        transition: 0.5s;
-                    }
-                }
-                &__address {
-                    @include footer-item;
-                    flex-basis: 9%; 
-                    &-heading {
-                        font-size: 1.100em;
-                        font-family: PTSans-Regular;
-                        line-height: normal;
-                        color: $social-grey;
-                    }
-                    &-description {
-                        font-family: PTSans-Regular;
-                        color: $footer-address;
-                        letter-spacing: 0.35px;
-                        font-size: 0.875em;
-
-                    }
-                }
-
-                &__time {
-                    @include footer-item; 
-                    flex-basis: 9%;
-                    &-clock {
-                        font-family: PTSans-Regular;
-                        font-size: 1.000em;
-                        line-height: 1.29;
-                        letter-spacing: 0.35px;
-                        color: $footer-address;
-                    }
-                    &-telephone {
-                        text-decoration: none;
-                        letter-spacing: 0.45px;
-                        color: $color-white;
-                        font-family: PTSans-Regular;
-                        font-weight: bold;
-                        font-size: 1.063em;
-
-                    }
-                }
-                &__developers {
-                    @include footer-item; 
-                    flex-basis: 9%;
-                    &-description {
-                        font-family: PTSans-Regular;
-                        color: rgba(255, 255, 255, 0.43);
-                        font-size: 0.875em;
-                        line-height: 1.2;
-                        letter-spacing: 0.14px;
-
-                    }
-                }
-            }
-            .overlay {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-image: url(../images/s4/overlay.png);
-                background-position-y: 191px;
-                z-index: -1;
-                opacity: 0.4;
             }
         }
     }

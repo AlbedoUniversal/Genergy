@@ -1,0 +1,92 @@
+.details {
+  position: relative;
+  margin-bottom: 7em;
+  &:before {
+      content: "";
+      position: absolute;
+      width: 1011px;
+      height: 484px;
+      background-image: url(../images/s7/dots.png);
+  }
+  
+  &-item {
+      max-width: 100rem;
+      margin: 0 auto;
+
+      &__text {
+          flex-basis: 45%;
+          position: relative;
+          right: -5%;
+  
+
+          .section-heading {
+              text-align: left;
+              line-height: 1.4;
+              margin-bottom: 1em;
+          }
+      }
+      &__list {
+          list-style-image: url(../images/s7/check.png);
+      }
+      &__link {
+          font-size: 18px;
+          line-height: 1.11;
+          letter-spacing: 0.09px;
+          text-align: left;
+          color: $heading-black;
+          font-family: PTSans-Regular;
+          margin-bottom: 1.5em;
+          padding-left: .4em;
+      }
+
+      &__picture {
+          flex-basis: 55%;
+          position: relative;
+
+          img {
+              transform: translate3d(0,0,0);
+              transition: transform 0.2s ease;
+              backface-visibility: hidden;
+              transform-style: preserve-3d;
+          }
+      }
+
+      &__gear {
+          position: absolute;
+          width: 100%;
+      }
+
+      &__spare {
+          position: absolute;
+           bottom: 18%;
+           left: 10%;
+           width: 90%;
+      }
+      &__oil {
+          position: absolute;
+          left: 1%;
+          bottom: 15%;
+      }
+
+      &__small {
+          position: absolute;
+          right: 360px;
+      }
+      &__little {
+          position: absolute;
+          bottom: 94px;
+          left: -26%;
+      }
+      &__big {
+          position: absolute;
+          bottom: 0;
+          left: 100%;
+      }
+      &__big2 {
+          position: absolute;
+          right: 182%;
+          top: 10%;
+          z-index: -1;
+      }
+  }
+}
