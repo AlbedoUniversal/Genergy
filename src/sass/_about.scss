@@ -1,8 +1,8 @@
 .about {
   position: relative;
-  
+
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     top: -205px;
@@ -10,18 +10,16 @@
     height: 364px;
     background-image: url(../images/s3/dots.png);
     background-size: contain;
-    
-    @media screen and (max-width:1200px) {
+
+    @media screen and (max-width: 1200px) {
       display: none;
     }
-}
+  }
 
   &__content {
     max-width: 100rem;
     margin: 0 auto;
     position: relative;
-
-
   }
 
   &__text {
@@ -30,8 +28,8 @@
     max-width: 44.25rem;
     border: solid 9px $border-grey;
     padding: 4.375rem 7rem;
-    
-    @media screen and (max-width:1200px) {
+
+    @media screen and (max-width: 1200px) {
       left: 0;
       margin: 0 auto;
     }
@@ -50,7 +48,6 @@
       line-height: 20px;
       font-size: 18px;
     }
-  
   }
 
   &__medals {
@@ -68,7 +65,7 @@
 
       &::before {
         position: absolute;
-        content: "1-е место в ЮФО в категории мини-сервис";
+        content: '1-е место в ЮФО в категории мини-сервис';
         top: 90px;
         left: 0;
         text-align: center;
@@ -81,7 +78,7 @@
       }
 
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         top: 71px;
         left: 46%;
@@ -95,33 +92,33 @@
 
   &__picture {
     position: relative;
-    
+
     &-oil {
       position: absolute;
       left: 0;
       top: 0;
-      
+
       .normgear {
         position: absolute;
         left: 13rem;
         top: -2rem;
         width: 622px;
       }
-      
+
       .oil {
         position: absolute;
         max-width: 19.5rem;
         left: 30.375rem;
         top: 11rem;
       }
-      
+
       .left-oil {
         position: absolute;
         max-width: 39.375rem;
         top: 21.875rem;
         left: -2rem;
       }
-      
+
       @media screen and (max-width: 1800px) and (min-width: 1200px) {
         width: 100%;
 
@@ -136,7 +133,7 @@
         }
       }
 
-      @media screen and (max-width:1200px) {
+      @media screen and (max-width: 1200px) {
         display: none;
       }
     }
@@ -150,21 +147,21 @@
         position: relative;
         top: -11rem;
         left: 8rem;
-        
-        @media screen and (max-width:1800px) {
+
+        @media screen and (max-width: 1800px) {
           display: none;
         }
       }
-      
+
       .right-oil {
         position: relative;
-        
-        @media screen and (max-width:1800px) {
+
+        @media screen and (max-width: 1800px) {
           max-width: 80%;
           float: right;
         }
 
-        @media screen and (max-width:1200px) {
+        @media screen and (max-width: 1200px) {
           display: none;
         }
       }
