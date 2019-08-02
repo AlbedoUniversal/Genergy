@@ -1,6 +1,6 @@
-
 .about {
   position: relative;
+  
   &:before {
     content: "";
     position: absolute;
@@ -10,9 +10,10 @@
     height: 364px;
     background-image: url(../images/s3/dots.png);
     background-size: contain;
+    
     @media screen and (max-width:1200px) {
       display: none;
-  }
+    }
 }
 
   &__content {
@@ -29,6 +30,7 @@
     max-width: 44.25rem;
     border: solid 9px $border-grey;
     padding: 4.375rem 7rem;
+    
     @media screen and (max-width:1200px) {
       left: 0;
       margin: 0 auto;
@@ -63,6 +65,7 @@
         visibility: visible;
         opacity: 1;
       }
+
       &::before {
         position: absolute;
         content: "1-е место в ЮФО в категории мини-сервис";
@@ -92,35 +95,50 @@
 
   &__picture {
     position: relative;
+    
     &-oil {
       position: absolute;
       left: 0;
       top: 0;
-      @media screen and (max-width:1200px) {
-        display: none;
-      }
-
+      
       .normgear {
-          position: absolute;
-          left: 13rem;
-          top: -2rem;
-          width: 622px;
-        }
-
+        position: absolute;
+        left: 13rem;
+        top: -2rem;
+        width: 622px;
+      }
+      
       .oil {
         position: absolute;
         max-width: 19.5rem;
         left: 30.375rem;
         top: 11rem;
       }
-
+      
       .left-oil {
         position: absolute;
         max-width: 39.375rem;
         top: 21.875rem;
         left: -2rem;
       }
+      
+      @media screen and (max-width: 1800px) and (min-width: 1200px) {
+        width: 100%;
 
+        .normgear {
+          max-width: 34%;
+          left: 10%;
+        }
+
+        .oil {
+          max-width: 32%;
+          left: 20%;
+        }
+      }
+
+      @media screen and (max-width:1200px) {
+        display: none;
+      }
     }
 
     &-drop {
@@ -132,13 +150,20 @@
         position: relative;
         top: -11rem;
         left: 8rem;
-        @media screen and (max-width:1200px) {
+        
+        @media screen and (max-width:1800px) {
           display: none;
         }
       }
       
       .right-oil {
         position: relative;
+        
+        @media screen and (max-width:1800px) {
+          max-width: 80%;
+          float: right;
+        }
+
         @media screen and (max-width:1200px) {
           display: none;
         }
