@@ -32,7 +32,7 @@ $(document).ready(function () {
           let newY = Math.floor(mY * smoothness) * (i + 1);
           let newX = Math.floor(mX * smoothness) * (i + 1);
 
-          child.style.transform = 'translate3d(' + newX + 'px,' + newY + 'px,' + '0px)';
+          child.style.transform = `translate3d(${newX}px, ${newY}px, 0px)`;
         });
       });
     };
@@ -62,17 +62,22 @@ $(document).ready(function () {
 
   // Packs Config details show
   const packsConfItems = document.getElementsByClassName('packs-content__configuration-pictures__item');
-  const packsDetails = document.getElementsByClassName('packs-content__configuration-pictures__orangeball-inner');
 
   for (let i = 0; i < packsConfItems.length; i++) {
 
     packsConfItems[i].addEventListener('click', function () {
 
       const detaiLink = this.dataset.detail;
-      const detail = document.querySelector(`[data-detail-show="${detaiLink}"]`);
+      const activeTab = document.querySelector('.tab-pane.active');
+      const detail = activeTab.querySelector(`[data-detail-show="${detaiLink}"]`);
+      const packsDetailsInner = activeTab.getElementsByClassName('packs-content__configuration-pictures__orangeball-inner');
 
-      for (let j = 0; j < packsDetails.length; j++) {
-        packsDetails[j].classList.remove('active');
+      activeTab.getElementsByClassName('packs-content__configuration-pictures__orangeball')[0].classList.remove('show');
+      activeTab.getElementsByClassName('packs-content__configuration-pictures__orangeball')[0].classList.add('show');
+
+
+      for (let j = 0; j < packsDetailsInner.length; j++) {
+        packsDetailsInner[j].classList.remove('active');
       }
 
       detail.classList.add('active');

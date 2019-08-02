@@ -1,6 +1,8 @@
 .details {
   position: relative;
   margin-bottom: 7em;
+  overflow: hidden;
+
   &:before {
       content: "";
       position: absolute;
@@ -25,9 +27,11 @@
               margin-bottom: 1em;
           }
       }
+
       &__list {
           list-style-image: url(../images/s7/check.png);
       }
+
       &__link {
           font-size: 18px;
           line-height: 1.11;
@@ -62,6 +66,7 @@
            left: 10%;
            width: 90%;
       }
+      
       &__oil {
           position: absolute;
           left: 1%;
@@ -72,16 +77,19 @@
           position: absolute;
           right: 360px;
       }
+
       &__little {
           position: absolute;
           bottom: 94px;
           left: -26%;
       }
+
       &__big {
           position: absolute;
           bottom: 0;
           left: 100%;
       }
+
       &__big2 {
           position: absolute;
           right: 182%;

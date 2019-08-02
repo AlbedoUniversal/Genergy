@@ -52,7 +52,6 @@
         width: 30%;
         position: relative;
         max-height: 15.125em;
-        border: 0.375em solid $border-grey;
         padding-bottom: 1.5em;
         padding-left: 2.625em;
         padding-right: 2.625em;
@@ -65,30 +64,27 @@
         background-repeat: no-repeat;
         color: $color-white;
         transition-duration: 0.3s; 
+        transition-property: border-color;
         @include set();
         filter: grayscale(1);
+        
         &:hover, &.active.greyscale {
-          border-color: $bold-orange;
           filter: grayscale(0);
         }
-        
-        // &.passenger {
-        //   background-image: url('../images/s5/light.png');
-        //   background-position: center center;
-        //   filter: grayscale(1);
-        // }
 
-        // &.suv {
-        //   background-image: url('../images/s5/light.png');
-        //   background-position: center center;
-        //   filter: grayscale(1);
-        // }
+        &::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          border: 9px solid transparent;
+        }
 
-        // &.commercial {
-        //   background-image: url('../images/s5/light.png');
-        //   background-position: center center;
-        //   filter: grayscale(1);
-        // }
+        &:hover::after {
+          border-color: $bold-orange;
+        }
 
       }
 
@@ -195,7 +191,6 @@
       form {
         position: relative;
         margin-left: 40px;
-        // width: 100%;
   
         .tab-wrapp__heading {
           font-family: TTCommons;
@@ -212,6 +207,7 @@
           padding-right: 20px;
         }
       }
+
       &-check {
         &-list {
           margin-top: 3.125em;
@@ -220,6 +216,7 @@
           padding-top: 30px;
           padding-bottom: 30px;
           position: relative;
+
           &::before {
             content: "";
             position: absolute;
@@ -230,6 +227,7 @@
             z-index: 0;
           }
         }
+
         &-item {
           list-style-type: none;
           font-size: 18px;
@@ -246,6 +244,7 @@
             margin-bottom: 17px;
             z-index: 1;
             cursor: pointer;
+
             &::before {
               content: "";
               height: 68px;
@@ -272,10 +271,9 @@
               width: 25px;
               border-radius: 50%;
               z-index: 2;
-              box-shadow: inset 0 0 8px 0 rgba(238, 139, 13, 0.58);
+              box-shadow: inset 0 0 8px 0 rgba(122, 122, 122, 0.58);
               background-color: $color-white;
-
-
+              
               &::after {
                 content: "";
                 position: absolute;
@@ -287,25 +285,27 @@
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center center; 
-                opacity: 1;
-                transform: scale(1);
+                opacity: 0;
+                transform: scale(0);
                 transition: all .6s ease;
               }
             }
             
-            & .box-click:checked ~ .box-mark {
-              box-shadow: inset 0 0 8px 0 rgba(122, 122, 122, 0.58);
-              
+            & .box-click:checked + .box-mark {
+              box-shadow: inset 0 0 8px 0 rgba(238, 139, 13, 0.58);
             }
-            & .box-click:checked ~ .box-mark::after {
-              opacity: 0;
-              transform: scale(0);
+
+            & .box-click:checked + .box-mark::after {
+              opacity: 1;
+              transform: scale(1);
             }
           }
         }
       }
+
       &-constructor {
         margin-right: 80px;
+
         &-heading {
           max-width: 337px;
           margin-bottom: 0.8em;
@@ -319,9 +319,11 @@
           text-align: left;
           color: $tabs-money-color;
         }
+
         &-data {
           margin-bottom: 0.8em;
         }
+
         &-enter {
           opacity: 0.85;
           border-radius: 18px;
@@ -342,6 +344,7 @@
 
           &:hover {
             box-shadow: inset 0 0 8px 0 rgba(246, 128, 18, 0.58);
+
             &::placeholder {
               color: #ffac33;
             }
@@ -351,6 +354,7 @@
             color: $packs-grey;
           }
         }
+
         .message {
           min-height: 84px;
           margin-bottom: 2em;
@@ -415,6 +419,16 @@
           border-radius: 50%;
           border: 12px solid #f8ddc7;
           background-image: linear-gradient(to top,#e66700cc,#f6af19c7);
+          opacity: 0;
+          transform: scale(0);
+          transition-duration: 0.3s;
+          visibility: hidden;
+
+          &.show {
+            transform: scale(1);
+            visibility: visible;
+            opacity: 1;
+          }
 
           &-inner {
             position: absolute;
