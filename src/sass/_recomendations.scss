@@ -1,5 +1,8 @@
 .recomendations {
     padding-bottom: 100px;
+    @media screen and (max-width:1200px) {
+        display: none;
+    }
     &-content {
         max-width: 100rem;
         margin: 0 auto;

@@ -39,6 +39,8 @@
     width: 100%;
     min-height: 11.5rem;
     background-image: url(../images/s3/dots.png);
+    @media screen and (max-width:1200px) {
+      display: none;
+    }
   }
-
 }

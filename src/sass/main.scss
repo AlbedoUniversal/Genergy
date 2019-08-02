@@ -49,6 +49,9 @@ body {
         margin-bottom: 4.125rem;
         min-height: 53rem;
         overflow: hidden;
+        @media screen and (max-width:1200px) {
+            overflow: visible;
+        }
 
         &-orange {
             position: absolute;
@@ -58,6 +61,9 @@ body {
             top: 0;
             right: -11.625rem;
             background-color: $bg-orange;
+            @media screen and (max-width:1200px) {
+                display: none;
+            }
         }
 
         &-content {
@@ -72,9 +78,15 @@ body {
         }
 
         &-menu {
+            @media screen and (max-width:880px) {
+                flex-direction: column;
+            }
             &__item {
                 line-height: 14px;
                 list-style-type: none;
+                @media screen and (max-width:880px) {
+                    margin-bottom: 1.3em;
+                }
             }
 
             &__tel {
@@ -96,6 +108,9 @@ body {
                 font-family: TTCommons;
                 font-size: 1.0625rem;
                 color: $color-white;
+                @media screen and (max-width:1200px) {
+                    color: $bg-orange;
+                }
             }
 
             &__ordercall {
@@ -110,6 +125,11 @@ body {
                 outline: none;
                 padding: 0.833em 1.389em;
                 transition: all 0.8s ease;
+                @media screen and (max-width:1200px) {
+                    color: $bg-orange;
+                    background-color: $color-white;
+                    border: solid 0.167em $bg-orange;
+                }
 
 
                 &:hover {
@@ -118,17 +138,25 @@ body {
                     border: solid 0.167em $color-white;
                     transition: all 0.5s ease;
                     font-weight: bold;
+                    @media screen and (max-width:1200px) {
+                        color: $color-white;
+                        background-color: $bg-orange;
+                        border: solid 0.167em $color-white;
+                    }
                 }
             }
         }
 
         &-tagline {
             padding-left: 2rem;
+            @media screen and (max-width:1200px) {
+                padding-left: 0;
+              }
 
             &__text {
                 flex-basis: 40%;
                 @media screen and (max-width:1200px) {
-                    flex-basis: 100%;
+                    // flex-basis: 100%;
                 }
             }
 
@@ -216,26 +244,23 @@ body {
             &__picture {
                 flex-basis: 60%;
                 position: relative;
+                @media screen and (max-width:1200px) {
+                    display: none;
+                }
 
                 &-man {
                     position: absolute;
                     z-index: 2;
                     right: 9.5rem;
                     bottom: -1.5rem;
-                    @media screen and (max-width:1200px) {
-                        display: none;
-                    }
                 }
 
                 &-car {
                     position: absolute;
                     z-index: 1;
                     left: 7.25rem;
-                    @media screen and (max-width:1300px) {
-                        left: 7.25rem;
-                    }
-                    @media screen and (max-width:1200px) {
-                        display: none;
+                    @media screen and (max-width:1400px) {
+                        left: 2.25rem;
                     }
                 }
             }

@@ -5,7 +5,32 @@ $(document).ready(function () {
     slidesToScroll: 2,
     prevArrow: '<img class="slick-prev" src="../images/s6/arrow.png">',
     nextArrow: '<img class="slick-next" src="../images/s6/arrow.png">',
-    dots: true
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   });
 
   $('.reviews-slider').slick({
@@ -13,7 +38,32 @@ $(document).ready(function () {
     slidesToScroll: 3,
     prevArrow: '<img class="slick-prev" src="../images/s9/arrow.png">',
     nextArrow: '<img class="slick-next" src="../images/s9/arrow.png">',
-    dots: true
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   });
 
   // Parralax
