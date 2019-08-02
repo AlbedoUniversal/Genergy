@@ -127,6 +127,9 @@ body {
 
             &__text {
                 flex-basis: 40%;
+                @media screen and (max-width:1200px) {
+                    flex-basis: 100%;
+                }
             }
 
             &__headings {
@@ -219,12 +222,21 @@ body {
                     z-index: 2;
                     right: 9.5rem;
                     bottom: -1.5rem;
+                    @media screen and (max-width:1200px) {
+                        display: none;
+                    }
                 }
 
                 &-car {
                     position: absolute;
                     z-index: 1;
                     left: 7.25rem;
+                    @media screen and (max-width:1300px) {
+                        left: 7.25rem;
+                    }
+                    @media screen and (max-width:1200px) {
+                        display: none;
+                    }
                 }
             }
         }
