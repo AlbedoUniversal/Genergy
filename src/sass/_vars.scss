@@ -73,4 +73,8 @@ $packs-grey: #bdbcbc;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @media screen and (max-width:880px) {
+        margin-bottom: 1em;
+        align-items: center;
+    }
 }

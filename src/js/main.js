@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // Slick slider
-  $('.stocks__slider').slick({
+  $(".stocks__slider").slick({
     slidesToShow: 2,
     slidesToScroll: 2,
     prevArrow: '<img class="slick-prev" src="../images/s6/arrow.png">',
@@ -8,32 +8,27 @@ $(document).ready(function () {
     dots: true,
     responsive: [
       {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
         breakpoint: 991,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          dots: true,
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
+          dots: true
         }
       }
     ]
   });
 
-  $('.reviews-slider').slick({
+  $(".reviews-slider").slick({
     slidesToShow: 3,
     slidesToScroll: 3,
     prevArrow: '<img class="slick-prev" src="../images/s9/arrow.png">',
@@ -41,26 +36,21 @@ $(document).ready(function () {
     dots: true,
     responsive: [
       {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
         breakpoint: 991,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          dots: true,
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
+          dots: true
         }
       }
     ]
@@ -95,7 +85,7 @@ $(document).ready(function () {
 
 
   // Packs List active item
-  const packs = document.getElementsByClassName('packs-content__list-item');
+  const packs = document.getElementsByClassName("packs-content__list-item");
 
   for (let i = 0; i < packs.length; i++) {
     packs[i].addEventListener('click', function () {
@@ -103,10 +93,10 @@ $(document).ready(function () {
         return;
       } else {
         for (let j = 0; j < packs.length; j++) {
-          packs[j].classList.remove('active', 'greyscale');
+          packs[j].classList.remove("active", "greyscale");
         }
 
-        this.classList.add('active', 'greyscale');
+        this.classList.add("active", "greyscale");
       }
     });
   }
@@ -139,7 +129,7 @@ $(document).ready(function () {
         .classList.add('show');
 
       for (let j = 0; j < packsDetailsInner.length; j++) {
-        packsDetailsInner[j].classList.remove('active');
+        packsDetailsInner[j].classList.remove("active");
       }
 
       detail.classList.add('active');
