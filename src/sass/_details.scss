@@ -2,11 +2,13 @@
   position: relative;
   margin-bottom: 7em;
   overflow: hidden;
+
   &:before {
     content: "";
     position: absolute;
     width: 1011px;
     height: 484px;
+
     background-image: url(../images/s7/dots.png);
     @media screen and (max-width:1200px) {
       display: none;
@@ -15,31 +17,39 @@
   &-item {
     max-width: 100rem;
     margin: 0 auto;
+
     &__text {
       flex-basis: 45%;
       position: relative;
       right: -5%;
+
       @media screen and (max-width:991px) {
         flex-basis: 100%;
       }
+
       @media screen and (max-width:580px) {
         padding: 0px 50px 0px 17px;
       }
+
       .section-heading {
         text-align: left;
         line-height: 1.4;
         margin-bottom: 1em;
+
         @media screen and (max-width:780px) {
           font-size: 2rem;
         }
+
         @media screen and (max-width:580px) {
           font-size: 1.6rem;
         }
       }
     }
+
     &__list {
       list-style-image: url(../images/s7/check.png);
     }
+
     &__link {
       font-size: 18px;
       line-height: 1.11;
@@ -54,9 +64,11 @@
     &__picture {
       flex-basis: 55%;
       position: relative;
+
       @media screen and (max-width:991px) {
         left: -16%;
       }
+
       @media screen and (max-width:580px) {
         flex-basis: 1%;
       }
@@ -79,6 +91,7 @@
       bottom: 18%;
       left: 10%;
       width: 90%;
+
       @media screen and (max-width:580px) {
         display: none;
       }
@@ -89,6 +102,7 @@
       left: 1%;
       bottom: 15%;
       width: 39%;
+
       @media screen and (max-width:580px) {
         display: none;
       }
@@ -97,6 +111,7 @@
     &__small {
       position: absolute;
       right: 360px;
+      
       @media screen and (max-width:991px) {
         display: none;
       }
