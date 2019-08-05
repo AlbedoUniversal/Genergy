@@ -1,6 +1,8 @@
 .stocks {
   margin-bottom: 5em;
   padding-top: 6.250em;
+  padding-left: 15px;
+  padding-right: 15px;
   &__content {
     max-width: 100rem;
     margin: 0 auto;
@@ -15,15 +17,18 @@
           top: -70%;
           right: 0%;
           z-index: -1;
+          @media screen and (max-width:1200px) {
+            display: none;
+          }
         }
       }
-  }
-
-  &__slider {
+    }
+    
+    &__slider {
     position: relative;
     margin-top: 50px;
     z-index: 2;
-
+    
     &-item {
       border: 9px solid $border-grey;
       padding-top: 2.167em;
@@ -31,6 +36,10 @@
       padding-right: 3.56em;
       padding-bottom: 2.167em;
       transition-duration: 0.5s;
+      @media screen and (max-width:500px) {
+        padding-left: 1em;
+        padding-right: 2.56em;
+      }
       
       &:focus {
         outline: none;
@@ -64,6 +73,10 @@
         width: 128%;
         border-top: 0.938em solid white;
         border-bottom: 0.938em solid white;
+        @media screen and (max-width:1110px) {
+          width: 110%;
+        }
+        
       }
 
       &-duration {
@@ -94,12 +107,18 @@
     right: 0;
     transform: rotateY(180deg);
     cursor: pointer;
+    @media screen and (max-width:500px) {
+      display: none;
+    }
   }
   
   .slick-prev {
     position: absolute;
     top: 45%;
     cursor: pointer;
+    @media screen and (max-width:500px) {
+      display: none;
+    }
   }
 
 }
@@ -119,6 +138,21 @@
   width: 473px !important;
   margin-right: 114px;
   margin: auto;
+  @media screen and (max-width:1250px) {
+    width: 420px !important;
+  }
+  @media screen and (max-width:1110px) {
+    width: 400px !important;
+  }
+  @media screen and (max-width:991px) {
+    width: 600px !important;
+  }
+  @media screen and (max-width:710px) {
+    width: 400px !important;
+  }
+  @media screen and (max-width:710px) {
+    width: 400px !important;
+  }
 }
 
 

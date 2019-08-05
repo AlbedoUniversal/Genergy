@@ -58,6 +58,11 @@ body {
         overflow: hidden;
         @media screen and (max-width:1200px) {
             overflow: visible;
+            min-height: 38rem;
+        }
+        @media screen and (max-width:880px) {
+            overflow: visible;
+            min-height: 34rem;
         }
 
         &-orange {
@@ -82,17 +87,57 @@ body {
 
         &-nav {
             padding-bottom: 4.25rem;
+            @media screen and (max-width:1200px) {
+                padding-bottom: 1rem;
+            }    
         }
 
         &-menu {
             @media screen and (max-width:880px) {
+                flex-wrap: wrap;
+            }
+            @media screen and (max-width:500px) {
+                padding-left: 0.3em;
+            }
+            @media screen and (max-width:400px) {
                 flex-direction: column;
             }
             &__item {
                 line-height: 14px;
                 list-style-type: none;
+                @media screen and (max-width:1200px) {
+                    &:nth-child(1) {
+                        flex-basis: 23%;
+                        @media screen and (max-width:800px) {
+                            flex-basis: 30%;
+                        }
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    &:nth-child(3) {
+                        display: none;
+                    }
+                    &:nth-child(4) {
+                        display: none;
+                    }
+                }
                 @media screen and (max-width:880px) {
                     margin-bottom: 1.3em;
+                }
+                &-media {
+                    display: none;
+                    @media screen and (max-width:1200px) {
+                        display: block;
+                        list-style-type: none;
+                        padding-left: 0.4em;
+                        .font-weight-bold {
+                            color: $bg-orange;
+                        }
+                    }
+                    @media screen and (max-width:1200px) {
+                        font-size: 14px;
+                    }
                 }
             }
 
@@ -137,6 +182,10 @@ body {
                     background-color: $color-white;
                     border: solid 0.167em $bg-orange;
                 }
+                @media screen and (max-width:680px) {
+                    font-size: 14px;
+                    margin-top: 1em;
+                }
 
 
                 &:hover {
@@ -163,14 +212,18 @@ body {
             &__text {
                 flex-basis: 40%;
                 @media screen and (max-width:1200px) {
-                    // flex-basis: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    flex-basis: 100%;
                 }
             }
 
             &__headings {
                 padding-bottom: 2.4375rem;
             }
-
+            
             &__heading {
                 font-family: TTCommons-DemiBold;
                 font-size: 3.5rem;
@@ -178,17 +231,34 @@ body {
                 color: $heading-black;
                 line-height: normal;
                 padding-left: 5.75rem;
+                @media screen and (max-width:1200px) {
+                    text-align: center;
+                    padding-left: 0rem;
+                    font-size: 3.5rem;
+                }
+                @media screen and (max-width:880px) {
+                    font-size: 2.5rem;
+                }
+                @media screen and (max-width:510px) {
+                    font-size: 1.5rem;
+                }
             }
-
+            
             &__subheading {
                 font-size: 1.625rem;
                 color: $subheading-grey;
                 font-family: TTCommons;
                 padding-left: 5.75rem;
+                @media screen and (max-width:1200px) {
+                    padding-left: 0;
+                    text-align: center;
+                }
+                @media screen and (max-width:880px) {
+                    font-size: 1.4rem;
+                }
             }
-
+            
             &__promo {
-               
                 &-text {
                     width: 36.5rem;
                     min-height: 14.125rem;
@@ -197,26 +267,41 @@ body {
                     padding: 50px;
                     z-index: 3;
                     left: 1.25rem;
+                    @media screen and (max-width:1200px) {
+                        left: 0;
+                    }
+                    @media screen and (max-width:600px) {
+                        width: 96%; 
+                        border: solid 6px $border-grey;
+                        padding: 20px 20px 30px 20px;
+                        height: auto;
+                    }
                 }
 
                 &-heading {
                     font-size: 1.625rem;
                     color: $heading-black;
+                    @media screen and (max-width:600px) {
+                        font-size: 1.2rem;
+                    }
                     .bold-orange {
                         font-weight: bold;
                         color: $bold-orange;
                     }
                 }
-
+                
                 &-subheading {
                     font-family: PTSans-Regular;
                     color: $subheading-grey;
                     letter-spacing: 0.09px;
                     font-size: 1.2rem;  
+                    @media screen and (max-width:600px) {
+                        font-size: 1rem;
+                    }
                 }
-
+                
                 &-button {
-                    width: 19.4375rem;
+                    width: 14.4375rem;
                     background-color: $color-white;
                     position: absolute;
                     z-index: 1;
@@ -231,12 +316,15 @@ body {
                     border-radius: 2.591em;
                     cursor: pointer;
                     font-family: TTCommons;
-                    font-size: 1.375rem;
+                    font-size: 1.1rem;
                     outline: none;
                     padding: 1.2em 2em;
                     line-height: 1;
                     transition-duration: 0.3s;
                     background-position: 0 100%;
+                    @media screen and (max-width:600px) {
+                        font-size: 0.9rem;
+                    }
                      
                     &:hover {
                         transform: scale(.9);
