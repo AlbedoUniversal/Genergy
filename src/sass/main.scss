@@ -41,6 +41,13 @@ p {
 body {
     background-color: $color-white;
 
+    @media screen and (max-width: 1440px) {
+        .section-content--padding{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
     .header {
         background-color: $color-white;
         margin: 0 auto;

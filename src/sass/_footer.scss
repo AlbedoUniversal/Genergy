@@ -130,18 +130,17 @@
         transition: all 0.3s ease;
         transform: scale(1);
 
-        & .questions-content__click:checked ~ .questions-content__checkmark {
+        .questions-content__click:checked ~ .questions-content__checkmark {
           background-color: #7f7f7f;
-          transition: all 4s ease;
-          // transform: scale(1);
+          transition: all 0.4s ease;
         }
 
-        & .questions-content__click:checked ~ .questions-content__checkmark:after {
-          opacity: 0;
-          scale: 0;
+        .questions-content__click:checked ~ .questions-content__checkmark::after {
+          opacity: 1;
+          scale: 1;
         }
 
-        & .questions-content__checkmark:after {
+        .questions-content__checkmark::after {
           left: 40%;
           top: 29%;
           width: 5px;
@@ -149,8 +148,8 @@
           border: solid $color-white;
           border-width: 0 2px 2px 0;
           transform: rotate(45deg);
-          opacity: 1;
-          scale: 2;
+          opacity: 0;
+          scale: 0;
           transition: all 0.4s ease;
         }
       }
@@ -173,7 +172,7 @@
         border-radius: 50%;
         background-color: #7f7f7f;
 
-        &:after {
+        &::after {
           content: "";
           position: absolute;
           opacity: 0;

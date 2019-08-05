@@ -17,20 +17,18 @@
             left: -12%;
             margin-bottom: 12px;
             cursor: pointer;
-            transition: all .3s ease;
-            transform: scale(1);
            
-            & .click:checked ~ .checkmark {
+            .click:checked ~ .checkmark {
                 background-color: #bfc0c2;
-                transition: all 4s ease;
+                transition: all 0.4s ease;
             }
 
-            & .click:checked ~ .checkmark:after {
-                opacity: 0;
-                scale: 0;
+            .click:checked ~ .checkmark::after {
+                opacity: 1;
+                scale: 1;
             }
 
-            & .checkmark:after {
+            .checkmark::after {
                 left: 40%;
                 top: 29%;
                 width: 5px;
@@ -38,8 +36,8 @@
                 border: solid $color-white;
                 border-width: 0 2px 2px 0;
                 transform: rotate(45deg); 
-                opacity: 1;
-                scale: 2;
+                opacity: 0;
+                scale: 0;
                 transition: all 0.4s ease;
             }
         }
@@ -62,7 +60,7 @@
             border-radius: 50%;
             background-color: #bfc0c2;
 
-            &:after {
+            &::after {
                 content: "";
                 position: absolute;
                 opacity: 0;
@@ -212,16 +210,16 @@
                         }
                     }
                     
-                    & .box-click:checked ~ .box-mark {
+                    .box-click:checked ~ .box-mark {
                         box-shadow: inset 0 0 8px 0 rgba(122, 122, 122, 0.58);
                     }
 
-                    & .box-click:checked ~ .box-mark::after {
+                    .box-click:checked ~ .box-mark::after {
                         opacity: 0;
                         transform: scale(0);
                     }
 
-                    & .box-click:checked {
+                    .box-click:checked {
                         color: rgb(211, 55, 55);
                     }
                 }
