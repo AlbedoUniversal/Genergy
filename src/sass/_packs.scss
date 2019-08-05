@@ -53,7 +53,8 @@
           flex-wrap: wrap;
         }
       }
-
+      
+      
       &-item {
         width: 30%;
         position: relative;
@@ -81,17 +82,24 @@
             padding-bottom: 1em;
           }  
         }
-
+        
         @media screen and (max-width: 768px){
           & {
             width: 47%;
-
+            
             &:last-child {
               margin: 2em auto;
             }
           }
         }
         
+        @media screen and (max-width: 500px){
+          & {
+            width: 75%;
+            margin: 0 auto 1em auto !important;
+          }
+        }
+
         &:hover, &.active.greyscale {
           filter: grayscale(0);
           
