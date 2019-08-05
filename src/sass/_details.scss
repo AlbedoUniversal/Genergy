@@ -2,7 +2,6 @@
   position: relative;
   margin-bottom: 7em;
   overflow: hidden;
-
   &:before {
     content: "";
     position: absolute;
@@ -13,93 +12,113 @@
       display: none;
     }
   }
-  
   &-item {
-      max-width: 100rem;
-      margin: 0 auto;
-      &__text {
-        flex-basis: 45%;
-        position: relative;
-        right: -5%;
-        @media screen and (max-width:991px) {
-          flex-basis: 100%;
-        }
-        .section-heading {
-          text-align: left;
-          line-height: 1.4;
-          margin-bottom: 1em;
-        }
+    max-width: 100rem;
+    margin: 0 auto;
+    &__text {
+      flex-basis: 45%;
+      position: relative;
+      right: -5%;
+      @media screen and (max-width:991px) {
+        flex-basis: 100%;
       }
-      &__list {
-        list-style-image: url(../images/s7/check.png);
+      @media screen and (max-width:580px) {
+        padding: 0px 50px 0px 17px;
       }
-      &__link {
-        font-size: 18px;
-        line-height: 1.11;
-        letter-spacing: 0.09px;
+      .section-heading {
         text-align: left;
-        color: $heading-black;
-        font-family: PTSans-Regular;
-        margin-bottom: 1.5em;
-        padding-left: .4em;
-      }
-
-      &__picture {
-        flex-basis: 55%;
-        position: relative;
-        @media screen and (max-width:991px) {
-          left: -16%;
+        line-height: 1.4;
+        margin-bottom: 1em;
+        @media screen and (max-width:780px) {
+          font-size: 2rem;
         }
-      }
-
-      img {
-        transform: translate3d(0,0,0);
-        transition: transform 0.2s ease;
-        backface-visibility: hidden;
-        transform-style: preserve-3d;
-      }
-
-      &__gear {
-        position: absolute;
-        width: 100%;
-      }
-
-      &__spare {
-        position: absolute;
-        bottom: 18%;
-        left: 10%;
-        width: 90%;
-      }
-      
-      &__oil {
-          position: absolute;
-          left: 1%;
-          bottom: 15%;
-          width: 39%;
-      }
-
-      &__small {
-          position: absolute;
-          right: 360px;
-      }
-
-      &__little {
-          position: absolute;
-          bottom: 94px;
-          left: -26%;
-      }
-
-      &__big {
-          position: absolute;
-          bottom: 0;
-          left: 100%;
-      }
-
-      &__big2 {
-        position: absolute;
-        right: 182%;
-        top: 10%;
-        z-index: -1;
+        @media screen and (max-width:580px) {
+          font-size: 1.6rem;
+        }
       }
     }
+    &__list {
+      list-style-image: url(../images/s7/check.png);
+    }
+    &__link {
+      font-size: 18px;
+      line-height: 1.11;
+      letter-spacing: 0.09px;
+      text-align: left;
+      color: $heading-black;
+      font-family: PTSans-Regular;
+      margin-bottom: 1.5em;
+      padding-left: .4em;
+    }
+
+    &__picture {
+      flex-basis: 55%;
+      position: relative;
+      @media screen and (max-width:991px) {
+        left: -16%;
+      }
+      @media screen and (max-width:580px) {
+        flex-basis: 1%;
+      }
+    }
+
+    img {
+      transform: translate3d(0,0,0);
+      transition: transform 0.2s ease;
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+    }
+
+    &__gear {
+      position: absolute;
+      width: 100%;
+    }
+
+    &__spare {
+      position: absolute;
+      bottom: 18%;
+      left: 10%;
+      width: 90%;
+      @media screen and (max-width:580px) {
+        display: none;
+      }
+    }
+    
+    &__oil {
+      position: absolute;
+      left: 1%;
+      bottom: 15%;
+      width: 39%;
+      @media screen and (max-width:580px) {
+        display: none;
+      }
+    }
+
+    &__small {
+      position: absolute;
+      right: 360px;
+      @media screen and (max-width:991px) {
+        display: none;
+      }
+    }
+
+    &__little {
+      position: absolute;
+      bottom: 94px;
+      left: -26%;
+    }
+
+    &__big {
+      position: absolute;
+      bottom: 0;
+      left: 100%;
+    }
+
+    &__big2 {
+      position: absolute;
+      right: 182%;
+      top: 10%;
+      z-index: -1;
+    }
+  }
 }
