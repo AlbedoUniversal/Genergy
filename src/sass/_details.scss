@@ -4,73 +4,78 @@
   overflow: hidden;
 
   &:before {
-      content: "";
-      position: absolute;
-      width: 1011px;
-      height: 484px;
-      background-image: url(../images/s7/dots.png);
+    content: "";
+    position: absolute;
+    width: 1011px;
+    height: 484px;
+    background-image: url(../images/s7/dots.png);
+    @media screen and (max-width:1200px) {
+      display: none;
+    }
   }
   
   &-item {
       max-width: 100rem;
       margin: 0 auto;
-
       &__text {
-          flex-basis: 45%;
-          position: relative;
-          right: -5%;
-  
-
-          .section-heading {
-              text-align: left;
-              line-height: 1.4;
-              margin-bottom: 1em;
-          }
-      }
-
-      &__list {
-          list-style-image: url(../images/s7/check.png);
-      }
-
-      &__link {
-          font-size: 18px;
-          line-height: 1.11;
-          letter-spacing: 0.09px;
+        flex-basis: 45%;
+        position: relative;
+        right: -5%;
+        @media screen and (max-width:991px) {
+          flex-basis: 100%;
+        }
+        .section-heading {
           text-align: left;
-          color: $heading-black;
-          font-family: PTSans-Regular;
-          margin-bottom: 1.5em;
-          padding-left: .4em;
+          line-height: 1.4;
+          margin-bottom: 1em;
+        }
+      }
+      &__list {
+        list-style-image: url(../images/s7/check.png);
+      }
+      &__link {
+        font-size: 18px;
+        line-height: 1.11;
+        letter-spacing: 0.09px;
+        text-align: left;
+        color: $heading-black;
+        font-family: PTSans-Regular;
+        margin-bottom: 1.5em;
+        padding-left: .4em;
       }
 
       &__picture {
-          flex-basis: 55%;
-          position: relative;
+        flex-basis: 55%;
+        position: relative;
+        @media screen and (max-width:991px) {
+          left: -16%;
+        }
+      }
 
-          img {
-              transform: translate3d(0,0,0);
-              transition: transform 0.2s ease;
-              backface-visibility: hidden;
-              transform-style: preserve-3d;
-          }
+      img {
+        transform: translate3d(0,0,0);
+        transition: transform 0.2s ease;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
       }
 
       &__gear {
-          position: absolute;
-          width: 100%;
+        position: absolute;
+        width: 100%;
       }
 
       &__spare {
-          position: absolute;
-           bottom: 18%;
-           left: 10%;
-           width: 90%;
+        position: absolute;
+        bottom: 18%;
+        left: 10%;
+        width: 90%;
       }
       
       &__oil {
           position: absolute;
           left: 1%;
           bottom: 15%;
+          width: 39%;
       }
 
       &__small {
@@ -91,10 +96,10 @@
       }
 
       &__big2 {
-          position: absolute;
-          right: 182%;
-          top: 10%;
-          z-index: -1;
+        position: absolute;
+        right: 182%;
+        top: 10%;
+        z-index: -1;
       }
-  }
+    }
 }

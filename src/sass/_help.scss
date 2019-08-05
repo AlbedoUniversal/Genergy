@@ -1,5 +1,10 @@
 .help {
   margin-top: 5rem;
+  .text-center {
+    @media screen and (max-width:580px) {
+        font-size: 1.9rem;
+      }
+  }
   &-list {
       display: grid;
       grid-template-columns: repeat(auto-fit, 21.25rem);
@@ -8,27 +13,46 @@
       row-gap: 2rem;
       justify-content: center;
       margin-top: 2.4rem;
+      
+      @media screen and (max-width:1200px) {
+        grid-template-columns: repeat(auto-fit, 48%);
+      }
+      @media screen and (max-width:991px) {
+        grid-template-columns: repeat(auto-fit, 46%);
+      }
+      @media screen and (max-width:768px) {
+        grid-template-columns: repeat(auto-fit, 109%);
+      }
+      @media screen and (max-width:580px) {
+        grid-template-columns: repeat(auto-fit, 95%);
+      }
       &__item {
           position: relative;
           min-height: 16.875rem;
           transition: 0.5s;
           &:nth-child(1) {
               background-image: url('../images/s4/1.png');
-          } 
-          &:nth-child(2) {
-              background-image: url('../images/s4/5.png');
-          } 
-          &:nth-child(3) {
-              background-image: url('../images/s4/3.png');
-          } 
-          &:nth-child(4) {
-              background-image: url('../images/s4/4.png');
-          } 
-          &:nth-child(5) {
-              background-image: url('../images/s4/5.png');
-          } 
-          &:nth-child(6) {
-              background-image: url('../images/s4/6.png');
+              background-size: cover;
+            } 
+            &:nth-child(2) {
+                background-image: url('../images/s4/5.png');
+                background-size: cover;
+            } 
+            &:nth-child(3) {
+                background-image: url('../images/s4/3.png');
+                background-size: cover;
+            } 
+            &:nth-child(4) {
+                background-image: url('../images/s4/4.png');
+                background-size: cover;
+            } 
+            &:nth-child(5) {
+                background-image: url('../images/s4/5.png');
+                background-size: cover;
+            } 
+            &:nth-child(6) {
+                background-image: url('../images/s4/6.png');
+                background-size: cover;
           } 
       }
       &__heading {
