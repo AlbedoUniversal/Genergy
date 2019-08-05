@@ -1,6 +1,4 @@
 .reviews {
-  // background-color: $reviews-bg transparent;
-  // background-blend-mode: screen;
   background-image: url('../images/s9/car-bg.png');
   background-size: cover;
   background-position-y: -90px;
@@ -19,6 +17,8 @@
   &-content {
     max-width: 100rem;
     margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .section-heading {
@@ -37,6 +37,9 @@
     &__item {
       max-width: 360px !important;
       margin-right: 90px;
+      @media screen and (max-width:1250px) {
+        max-width: 320px !important;
+      }
       
       &:focus {
         outline: none;
@@ -54,6 +57,9 @@
       color: $reviews-grey;
       background-color: $white;
       border: 9px solid transparent;
+      @media screen and (max-width:1250px) {
+        height: 370px;
+      }
 
       &::after {
         position: absolute;
