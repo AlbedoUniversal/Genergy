@@ -2,7 +2,7 @@
   margin-top: 5rem;
   .text-center {
     @media screen and (max-width:580px) {
-        font-size: 1.9rem;
+        font-size: 1.6rem;
       }
   }
   &-list {
@@ -67,6 +67,10 @@
           bottom: 0;
           padding: 60px 27px;
           transition: 0.3s;
+          @media screen and (max-width:580px) {
+            font-size: 1.6rem;
+          }
+
       }
 
       &__description {

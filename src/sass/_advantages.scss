@@ -6,6 +6,9 @@
   
   .section-heading {
     padding-bottom: 0.2rem;
+    @media screen and (max-width:768px) {
+      font-size: 1.6rem;
+    }
   }
   
   &__list {

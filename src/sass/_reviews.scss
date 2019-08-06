@@ -31,6 +31,9 @@
     letter-spacing: normal;
     position: relative;
     z-index: 1;
+    @media screen and (max-width:480px) {
+      font-size: 30px;
+    }
   }
 
   &-slider {
@@ -39,6 +42,12 @@
       margin-right: 90px;
       @media screen and (max-width:1250px) {
         max-width: 320px !important;
+      }
+      @media screen and (max-width:1200px) {
+        max-width: 50% !important;
+      }
+      @media screen and (max-width:991px) {
+        max-width: 20em !important;
       }
       
       &:focus {
@@ -59,6 +68,9 @@
       border: 9px solid transparent;
       @media screen and (max-width:1250px) {
         height: 370px;
+      }
+      @media screen and (max-width:480px) {
+        height: 400px;
       }
 
       &::after {
@@ -138,6 +150,21 @@
     top: 32%;
     right: 0;
     cursor: pointer;
+    z-index: 333;
+    @media screen and (max-width:991px) {
+      width: 3%;
+    }
+    @media screen and (max-width:768px) {
+      right: 16%;
+      width: 5%;
+    }
+    @media screen and (max-width:630px) {
+      right: 7%;
+      width: 5%;
+    }
+    @media screen and (max-width:480px) {
+      display: none;
+    }
   }
   
   .slick-prev {
@@ -145,6 +172,21 @@
     position: absolute;
     top: 32%;
     cursor: pointer;
+    z-index: 333;
+    @media screen and (max-width:991px) {
+      width: 3%;
+    }
+    @media screen and (max-width:768px) {
+      left: 16%;
+      width: 5%;
+    }
+    @media screen and (max-width:630px) {
+      left: 7%;
+      width: 5%;
+    }
+    @media screen and (max-width:480px) {
+      display: none;
+    }
   }
 
   .slick-dots {
@@ -176,5 +218,4 @@
       background-color: $white;
     }
   }
-
 }
