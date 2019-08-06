@@ -12,6 +12,7 @@
 @import 'reviews';
 @import 'scroll';
 @import 'footer';
+@import 'scroll-modal';
 @import 'modal';
 
 html {
@@ -222,6 +223,10 @@ body {
 
             &__headings {
                 padding-bottom: 2.4375rem;
+                @media screen and (max-width:1200px) {
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
             }
             
             &__heading {

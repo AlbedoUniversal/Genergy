@@ -1,0 +1,56 @@
+#popup {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 99999;
+  background-color: rgba(0, 0, 0, 0.84);
+  top: 0;
+  left: 0;
+  display: none;
+  transition: all 0.5s ease;
+
+  #modal {
+    position: absolute;
+    // width: 76%;
+    // height: 57%
+    width: 70%;
+    height: 70%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: auto;
+    top: 0; left: 0; bottom: 0; right: 0;
+    border: 9px solid $bold-orange;
+    #close {
+      position: absolute;
+      display: block;
+      width: 25px;
+      height: 25px;
+      right: -5%;
+      top: -15%;
+      cursor: pointer;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 30px;
+        background-color: rgb(255, 255, 255);
+        top: -20%;
+        border-radius: 20px;
+        right: 37%;
+        transform: rotate(45deg);
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 30px;
+        background-color: rgb(255, 255, 255);
+        top: -20%;
+        border-radius: 20px;
+        right: 37%;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

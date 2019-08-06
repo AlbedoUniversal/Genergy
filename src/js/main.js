@@ -47,6 +47,15 @@ $(document).ready(function () {
       {
         breakpoint: 991,
         settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
@@ -142,4 +151,34 @@ $(document).ready(function () {
     theme: '3d-dark',
     advanced: { autoExpandHorizontalScroll: true }
   });
+
+  // $(".scroll-item").click(function() {
+  //     var item = $(this); 
+  //   var src = item.atrr('url'); 
+  // })
+
+  const scrollItems = document.querySelectorAll('.scroll-item');
+
+  Array.from(scrollItems).forEach(function(item) {
+    item.addEventListener('click', function() {
+      // const reg = /"([^"]*)"/;
+      const url = this.style.backgroundImage;
+      console.log(url);
+
+      document.getElementById('modal').style.backgroundImage = url;
+      document.getElementById('popup').style.display = 'block';
+      
+      window.onclick = function () {
+        if (event.target == popup) {
+          popup.style.display = 'none';
+        }
+      }
+    });
+  });
+  
+  document.getElementById('close').onclick = function () {
+    if (event.target == this) {
+      popup.style.display = 'none';
+    }
+  };
 });

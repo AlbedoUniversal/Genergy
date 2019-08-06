@@ -15,6 +15,10 @@
       background-repeat: no-repeat;
       background-position: center;
       justify-content: space-evenly;
+      @media screen and (max-width: 880px) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
 
       &__picture {
         position: relative;
@@ -22,6 +26,9 @@
         width: 17.75em;
         @media screen and (max-width: 1200px) {
           width: 0.1em;
+        }
+        @media screen and (max-width: 880px) {
+          display: none;
         }
 
         img {
@@ -44,12 +51,18 @@
           position: absolute;
           left: -30%;
           top: -7%;
+          @media screen and (max-width:880px) {
+            display: none;
+          }
         }
-
+        
         &-leftsmallgears {
           position: absolute;
           left: 13%;
           bottom: 0;
+          @media screen and (max-width:880px) {
+            display: none;
+          }
         }
 
         &-rightgear {
@@ -76,6 +89,12 @@
         text-align: left;
         color: $color-white;
         letter-spacing: 0.42px;
+        @media screen and (max-width: 880px) {
+          padding: 0 15px 0 15px;
+          font-size: 2em;
+          padding: 0 15px 0 15px;
+          text-align: center;
+        }
       }
 
       &__inputs {
@@ -94,6 +113,9 @@
             @media screen and (max-width: 880px) {
               margin-bottom: 1em;
             }
+            @media screen and (max-width: 600px) {
+              height: 2.8em;
+            }
           }
 
           .telephone {
@@ -103,6 +125,9 @@
               margin-left: 0;
               margin-bottom: 1em;
             }
+            @media screen and (max-width: 600px) {
+              height: 2.8em;
+            }
           }
 
           .call {
@@ -111,6 +136,9 @@
             margin-left: 1.563em;
             @media screen and (max-width: 880px) {
               margin-left: 0;
+            }
+            @media screen and (max-width: 600px) {
+              font-size: 1.4em;
             }
           }
         }
