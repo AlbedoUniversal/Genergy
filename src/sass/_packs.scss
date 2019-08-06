@@ -5,6 +5,15 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  &__tabs {
+    position: relative;
+    min-height: 700px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+
   &-content {
     max-width: 100rem;
     margin: 0 auto;
@@ -135,8 +144,16 @@
     }
 
     &__configuration {
-      max-width: 1140px;
+      position: absolute;
+      top: 0;
+      visibility: hidden;
+      min-width: 1140px;
       margin: 38px auto 0 auto;
+
+      &:first-child {
+        visibility: visible;
+        display: block;
+      }
 
       .tab-content {
         background-color: $color-white;
@@ -144,14 +161,13 @@
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
         border-bottom-left-radius: 10px;
-        
       }
 
       .tab-pane {
         padding-bottom: 30px;
         padding-top: 30px;
 
-        &#toConf {
+        &#toConf, &#toConf2, &#toConf3 {
           padding-top: 70px;
 
           form {
