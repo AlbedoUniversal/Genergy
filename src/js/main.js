@@ -92,20 +92,33 @@ $(document).ready(function () {
     Parallax('.questions', '.questions-content__picture img', 0.01);
   }
 
-
   // Packs List active item
   const packs = document.getElementsByClassName("packs-content__list-item");
-
+  const packsTabs = document.getElementsByClassName('packs-content__configuration');
   for (let i = 0; i < packs.length; i++) {
     packs[i].addEventListener('click', function () {
+
+      const tabId = this.id.replace(/(-tab)/, '');
+      const targetTab = document.getElementById(tabId);
+
       if (this.classList.contains('active')) {
         return;
       } else {
+
         for (let j = 0; j < packs.length; j++) {
           packs[j].classList.remove("active", "greyscale");
         }
 
         this.classList.add("active", "greyscale");
+
+        for (let i = 0; i < packsTabs.length; i++) {
+          packsTabs[i].style.visibility = 'hidden';
+          packsTabs[i].style.display = 'none';
+
+        }
+
+        targetTab.style.display = 'block';
+        targetTab.style.visibility = 'visible';
       }
     });
   }
@@ -118,7 +131,8 @@ $(document).ready(function () {
   for (let i = 0; i < packsConfItems.length; i++) {
     packsConfItems[i].addEventListener('click', function () {
       const detaiLink = this.dataset.detail;
-      const activeTab = document.querySelector('.tab-pane.active');
+      const activeTab = this.parentNode.parentNode.parentNode;
+      console.log(activeTab);
       const detail = activeTab.querySelector(
         `[data-detail-show="${detaiLink}"]`
       );
@@ -159,15 +173,15 @@ $(document).ready(function () {
 
   const scrollItems = document.querySelectorAll('.scroll-item');
 
-  Array.from(scrollItems).forEach(function(item) {
-    item.addEventListener('click', function() {
+  Array.from(scrollItems).forEach(function (item) {
+    item.addEventListener('click', function () {
       // const reg = /"([^"]*)"/;
       const url = this.style.backgroundImage;
       console.log(url);
 
       document.getElementById('modal').style.backgroundImage = url;
       document.getElementById('popup').style.display = 'block';
-      
+
       window.onclick = function () {
         if (event.target == popup) {
           popup.style.display = 'none';
@@ -175,7 +189,7 @@ $(document).ready(function () {
       }
     });
   });
-  
+
   document.getElementById('close').onclick = function () {
     if (event.target == this) {
       popup.style.display = 'none';
