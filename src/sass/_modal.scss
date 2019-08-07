@@ -2,9 +2,8 @@
     display: flex;
     justify-content: center;
     padding-top: 20px;
-    background-image: url('../images/s5/packs_bg.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+    padding-left: 15px;
+    padding-right: 15px;
     z-index: 22222222;
 
     form {
@@ -99,6 +98,9 @@
         position: relative;
         overflow: hidden;
         z-index: 1;
+        @media screen and (max-width: 500px) {
+            padding: 20px 6px;
+        }
 
         &::before {
             content: "";
@@ -106,13 +108,10 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            background-image: url('../images/s2/left_oil.png');
-            background-size: contain;
+            background-image: url('../images/s13/oil_form.png');
+            background-size: 20%;
             background-repeat: no-repeat;
-            background-position-y: 97%;
-            transform: rotate(45deg);
-            background-position-x: -20%;
-            
+            background-position-y: 90%;
         }
 
         .packs-content__configuration-constructor {
@@ -129,6 +128,15 @@
                 font-size: 20px;
                 line-height: 1.4;
                 letter-spacing: 0.5px;
+                @media screen and (max-width:520px) {
+                    font-size: 15px;
+                    text-align: center;
+                }
+            }
+            &-enter {
+                @media screen and (max-width:520px) {
+                    width: 14em;
+                }
             }
 
             &-desc {
@@ -140,11 +148,15 @@
                 margin-top: 1em;
                 margin-bottom: 0.800em;
                 align-self: baseline;
+                @media screen and (max-width:520px) {
+                    font-size: 15px;
+                    align-self: center;
+                }
             }
 
             &-list {
                 padding-left: 0;
-                width: 320px;
+                // width: 320px;
                 font-family: PTSans-Regular;
                 font-size: 18px;
                 letter-spacing: 0.09px;
@@ -155,6 +167,7 @@
 
             &-link {
                 list-style-type: none;
+                min-width: 78px;
 
                 .box {
                     height: 70px;
@@ -233,9 +246,13 @@
                 padding: 1em 1.5em;
                 margin-top: 1em;
             }
+            .personality {
+                @media screen and (max-width:520px) {
+                    font-size: 0.8em;
+                }
+            }
         }
     }
-
     &--configuration {
         display: flex;
         justify-content: center;
@@ -246,6 +263,32 @@
         background-color: #ffffff;
         overflow: hidden;
         z-index: 1;
+        @media screen and (max-width:768px) {
+            padding: 53px 40px;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: url('../images/s13/oil_form.png');
+            background-size: 10%;
+            background-repeat: no-repeat;
+            background-position-y: 90%;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: url('../images/s13/meh.jpg');
+            background-size: 33%;
+            background-repeat: no-repeat;
+            background-position-y: 90%;
+            background-position-x: 100%;
+        }
 
         .packs-content__configuration {
             &-constructor {
@@ -257,8 +300,11 @@
                     font-size: 20px;
                     line-height: 1.4;
                     letter-spacing: 0.5px;
+                    @media screen and (max-width:768px) {
+                        text-align: center;
+                    }
                 }
-
+                
                 &-subheading {
                     font-size: 16px;
                     font-family: PTSans-Regular;
@@ -266,10 +312,30 @@
                     letter-spacing: 0.08px;
                     color: $packs-grey;
                     margin-bottom: 30px;
+                    @media screen and (max-width:768px) {
+                        text-align: center;
+                        width: 100%;
+                    }
+                }
+                &-enter {
+                    @media screen and (max-width:768px) {
+                        width: 14em;
+                    }
                 }
 
-                &-data {
+                .d-flex {
+                    @media screen and (max-width:768px) {
+                        flex-direction: column;
+                        align-self: center;
+                    }
+                }
+
+                &-data.albedo {
                     margin-right: 10px;
+                    @media screen and (max-width:768px) {
+                        text-align: center;
+                        margin-right: 0px;
+                    }
 
                     &:last-child {
                         margin-right: 0;
@@ -289,6 +355,13 @@
                 .wrap-personality {
                     margin-left: 32px !important;
                     margin-bottom: 30px;
+                    @media screen and (max-width:768px) {
+                        flex-direction: row;
+                    }
+                    .personality {
+                        font-size: 12px;
+                        padding-left: 10px;
+                    }
                 }
 
             }

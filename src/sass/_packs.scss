@@ -9,10 +9,6 @@
     padding-bottom: 370px;    
   }
 
-  @media screen and (max-width: 425px){
-    padding-bottom: 150px;
-  }
-
   &__tabs {
     position: relative;
     min-height: 700px;
@@ -526,9 +522,7 @@
         margin-right: 80px;
 
         @media screen and (max-width: 992px){
-          & {
-            margin-right: 20px;
-          }
+          margin-right: 20px;
         }
 
         @media screen and (max-width: 900px){
@@ -561,7 +555,7 @@
           }
         }
 
-        &-data {
+        &-data.svyat {
           margin-bottom: 0.8em;
           
           @media screen and (max-width: 900px){

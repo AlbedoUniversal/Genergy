@@ -111,7 +111,7 @@
     transform: rotateY(180deg);
     cursor: pointer;
     @media screen and (max-width:500px) {
-      display: none;
+      display: none !important;
     }
   }
   
@@ -120,7 +120,7 @@
     top: 45%;
     cursor: pointer;
     @media screen and (max-width:500px) {
-      display: none;
+      display: none !important;
     }
   }
 
