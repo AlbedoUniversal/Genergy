@@ -66,7 +66,7 @@ $(document).ready(function () {
   });
 
   // Parralax
-  if (screen.width >= 1200) {
+  if (screen.width >= 991) {
     function Parallax(parent, children, smoothness) {
       let parallaxChildren = document.querySelectorAll(children);
 
@@ -112,13 +112,10 @@ $(document).ready(function () {
         this.classList.add("active", "greyscale");
 
         for (let i = 0; i < packsTabs.length; i++) {
-          packsTabs[i].style.visibility = 'hidden';
-          packsTabs[i].style.display = 'none';
-
+          packsTabs[i].classList.remove("active");
         }
 
-        targetTab.style.display = 'block';
-        targetTab.style.visibility = 'visible';
+        targetTab.classList.add("active");
       }
     });
   }
@@ -132,7 +129,6 @@ $(document).ready(function () {
     packsConfItems[i].addEventListener('click', function () {
       const detaiLink = this.dataset.detail;
       const activeTab = this.parentNode.parentNode.parentNode;
-      console.log(activeTab);
       const detail = activeTab.querySelector(
         `[data-detail-show="${detaiLink}"]`
       );
@@ -140,16 +136,7 @@ $(document).ready(function () {
         'packs-content__configuration-pictures__orangeball-inner'
       );
 
-      activeTab
-        .getElementsByClassName(
-          'packs-content__configuration-pictures__orangeball'
-        )[0]
-        .classList.remove('show');
-      activeTab
-        .getElementsByClassName(
-          'packs-content__configuration-pictures__orangeball'
-        )[0]
-        .classList.add('show');
+      activeTab.getElementsByClassName('packs-content__configuration-pictures__orangeball')[0].classList.toggle('show');
 
       for (let j = 0; j < packsDetailsInner.length; j++) {
         packsDetailsInner[j].classList.remove("active");
@@ -165,11 +152,6 @@ $(document).ready(function () {
     theme: '3d-dark',
     advanced: { autoExpandHorizontalScroll: true }
   });
-
-  // $(".scroll-item").click(function() {
-  //     var item = $(this); 
-  //   var src = item.atrr('url'); 
-  // })
 
   const scrollItems = document.querySelectorAll('.scroll-item');
 
