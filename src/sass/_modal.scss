@@ -339,8 +339,17 @@
                     }
                 }
 
+                &-data.svyat {
+                    @media screen and (min-width: 769px){
+                        display: flex;
+                        justify-content: center;
+                        max-width: 30%;
+                    }
+                }
+
                 &-data.albedo {
                     margin-right: 10px;
+
                     @media screen and (max-width:768px) {
                         text-align: center;
                         margin-right: 0px;
@@ -355,10 +364,17 @@
                     }
                 }
 
+                
+
                 &-enter {
                     text-align: center;
                     padding-left: 0;
                     padding-right: 0;
+                    
+                    @media screen and (min-width: 769px){
+                        max-width: 90%;
+                        
+                    }
                 }
 
                 .wrap-personality {
