@@ -3,24 +3,27 @@
   padding-top: 6.250em;
   padding-left: 15px;
   padding-right: 15px;
+  @media screen and (max-width:480px) {
+    padding-top: 2.250em;
+  }
   &__content {
     max-width: 100rem;
     margin: 0 auto;
-      .section-heading {
-        position: relative;
-        @media screen and (max-width:580px) {
-          font-size: 1.6rem;
-        }
-        &::before {
-          content: "";
-          width: 686px;
-          height: 184px;
-          position: absolute;
-          background-image: url('../images/s6/dots.png');
-          top: -70%;
-          right: 0%;
-          z-index: -1;
-          @media screen and (max-width:1200px) {
+    .section-heading {
+      position: relative;
+      @media screen and (max-width:580px) {
+        font-size: 1.6rem;
+      }
+      &::before {
+        content: "";
+        width: 686px;
+        height: 184px;
+        position: absolute;
+        background-image: url('../images/s6/dots.png');
+        top: -70%;
+        right: 0%;
+        z-index: -1;
+        @media screen and (max-width:1200px) {
             display: none;
           }
         }

@@ -6,7 +6,13 @@
   background-size: cover;
 
   @media screen and (max-width: 992px){
+    padding-bottom: 50px;    
+  }
+  @media screen and (max-width: 900px){
     padding-bottom: 370px;    
+  }
+  @media screen and (max-width: 480px){
+    padding-bottom: 200px;    
   }
 
   &__tabs {
@@ -24,6 +30,12 @@
     &__done {
       .section-heading {
         color: $color-white;
+        @media screen and (max-width:768px) {
+          font-size: 2.2rem;
+        }
+        @media screen and (max-width:480px) {
+          font-size: 1.5rem;
+        }
       }
 
       &-exclusive {
@@ -43,6 +55,10 @@
         max-width: 358px;
         margin: 0 auto;
         margin-top: 1.5em;
+        @media screen and (max-width:480px) {
+          max-width: 200px;
+          font-size: 1.1em;
+        }
 
         span {
           display: block;
@@ -309,7 +325,7 @@
 
         @media screen and (max-width: 375px){
           border-width: 3px;
-          font-size: 14px;
+          font-size: 12px;
         }
         
         &.active {
