@@ -138,11 +138,12 @@
                 @media screen and (max-width:520px) {
                     font-size: 15px;
                     text-align: center;
+                    padding: 0px 10px;
                 }
             }
             &-enter {
                 @media screen and (max-width:520px) {
-                    width: 14em;
+                    width: 12em;
                 }
             }
 
@@ -330,6 +331,9 @@
                     @media screen and (max-width:768px) {
                         width: 14em;
                     }
+                    @media screen and (max-width:520px) {
+                        width: 12em;
+                    }
                 }
 
                 .d-flex {
@@ -384,7 +388,7 @@
                         flex-direction: row;
                     }
                     .personality {
-                        font-size: 12px;
+                        font-size: 10px;
                         padding-left: 10px;
                     }
                 }

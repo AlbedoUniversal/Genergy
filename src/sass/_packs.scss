@@ -96,10 +96,10 @@
         background-position: center center;
         background-repeat: no-repeat;
         color: $color-white;
-        transition-duration: 0.3s; 
         transition-property: border-color;
         @include set();
         filter: grayscale(1);
+        transition: all 0.9s ease;
         
         @media screen and (max-width: 1024px){
           & {
@@ -131,6 +131,7 @@
           
           &::after {
             border-color: $bold-orange;
+            transition-duration: 0.9s;
           }
         }
         
@@ -755,6 +756,7 @@
             transform: scale(0);
             transition-property: transform;
             transition-duration: 0.3s;
+            cursor: pointer;
             
             &.active {
               display: flex;

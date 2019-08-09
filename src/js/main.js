@@ -125,10 +125,12 @@ $(document).ready(function () {
     'packs-content__configuration-pictures__item'
   );
 
+  let activeTab;
+
   for (let i = 0; i < packsConfItems.length; i++) {
     packsConfItems[i].addEventListener('click', function () {
       const detaiLink = this.dataset.detail;
-      const activeTab = this.parentNode.parentNode.parentNode;
+      activeTab = this.parentNode.parentNode.parentNode;
       const detail = activeTab.querySelector(
         `[data-detail-show="${detaiLink}"]`
       );
@@ -137,12 +139,18 @@ $(document).ready(function () {
       );
 
       activeTab.getElementsByClassName('packs-content__configuration-pictures__orangeball')[0].classList.toggle('show');
+      activeTab.getElementsByClassName('packs-content__configuration-pictures__orangeball')[0].classList.toggle('show',false);
+
+      // packsDetailsInner[i].addEventListener('click', function() {
+      // })
+      
 
       for (let j = 0; j < packsDetailsInner.length; j++) {
         packsDetailsInner[j].classList.remove("active");
       }
 
       detail.classList.add('active');
+
     });
   }
 
@@ -159,14 +167,21 @@ $(document).ready(function () {
     item.addEventListener('click', function () {
       // const reg = /"([^"]*)"/;
       const url = this.style.backgroundImage;
-      console.log(url);
 
+      document.getElementById('body').classList.add('active__modal');
+      
       document.getElementById('modal').style.backgroundImage = url;
-      document.getElementById('popup').style.display = 'block';
+      document.getElementById('modal').style.visibility = 'visible';
+
+      document.getElementById('popup').style.opacity = 1;
+      // popup.style.transform = 'scale(1)';
+
+
 
       window.onclick = function () {
         if (event.target == popup) {
-          popup.style.display = 'none';
+          document.getElementById('body').classList.remove('active__modal');
+          popup.style.opacity = 0;
         }
       }
     });
@@ -174,7 +189,9 @@ $(document).ready(function () {
 
   document.getElementById('close').onclick = function () {
     if (event.target == this) {
-      popup.style.display = 'none';
+      popup.style.opacity = 0;
+      popup.style.visibility = 'visible';
+      document.getElementById('body').classList.remove('active__modal');
     }
   };
 });
